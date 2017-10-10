@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/center_header_layout_margin_left"
+        android:layout_marginTop="@dimen/center_header_layout_margin_top"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/user_center_header_big_view"
+            android:layout_width="@dimen/center_header_user_iv_width"
+            android:layout_height="@dimen/center_header_user_iv_width"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/sel_user_center_head_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/user_center_header_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/user_header_image_margin"
+                android:background="@drawable/sel_user_center_head_bg"
+                android:src="@drawable/user_header_def_img" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/center_header_user_layout_left"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_vip_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/user_center_vip_name"
+                android:textColor="#cccccc"
+                android:textSize="@dimen/center_header_user_name_size" />
+
+            <TextView
+                android:id="@+id/user_vip_number_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:textColor="#cccccc"
+                android:textSize="@dimen/center_header_user_name_size" />
+
+            <TextView
+                android:id="@+id/user_vip_remaintime_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/user_center_vip_remain_date"
+                android:textColor="#cccccc"
+                android:textSize="@dimen/center_header_user_name_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_info_account_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/center_header_user_iv_width"
+            android:layout_marginLeft="@dimen/center_header_account_view_left"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/center_header_account_view_bottom"
+            android:paddingTop="@dimen/center_header_account_view_top">
+
+            <TextView
+                android:id="@+id/user_info_account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|left"
+                android:paddingTop="@dimen/center_header_account_name_top"
+                android:text="@string/user_center_info_account"
+                android:textColor="#cccccc"
+                android:textSize="@dimen/center_header_account_name_size" />
+
+
+            <TextView
+                android:id="@+id/user_info_account_num_l"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom|left"
+                android:text="\?"
+                android:textColor="@color/user_text_deep_red"
+                android:textSize="@dimen/center_header_account_num_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_info_account_num_r"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/center_header_account_num_r_bottom"
+                android:layout_marginLeft="@dimen/center_header_account_num_r_top"
+                android:gravity="bottom|left"
+                android:text=".\?\?"
+                android:textColor="@color/user_text_deep_red"
+                android:textSize="@dimen/center_header_account_num_r_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/user_info_account_num_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/center_header_account_num_unit_bottom"
+                android:layout_marginLeft="@dimen/center_header_account_num_r_top"
+                android:gravity="bottom"
+                android:text="@string/RMB"
+                android:textColor="#dd284e"
+                android:textSize="@dimen/center_header_account_num_unit_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 2行5列方格,可组合控件 -->
+    <com.golive.cinema.views.metroviews.widget.TvRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/user_center_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/center_recycler_view_margin_bottom"
+        android:layout_marginTop="@dimen/center_recycler_view_margin_top"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/center_recycler_view_padding"
+        android:paddingLeft="@dimen/center_recycler_view_margin_left"
+        android:paddingRight="@dimen/center_recycler_view_margin_left"
+        android:paddingTop="@dimen/center_recycler_view_padding"
+        android:scrollbars="none"
+        app:tv_itemExtendwidth="@dimen/recycler_view_item_width"
+        app:tv_layoutManager="SpannableGridLayoutManager"
+        app:tv_numColumns="5"
+        app:tv_numRows="2" />
+</RelativeLayout>

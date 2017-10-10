@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/user_history_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/user_history_title_margin_t"
+        android:lineSpacingMultiplier="1.42"
+        android:text="@string/user_center_tab_history"
+        android:textSize="@dimen/user_history_title_ts"
+        android:textColor="@color/item_white_color"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- main view-->
+        <LinearLayout
+            android:id="@+id/user_history_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/user_history_detail_mg_t"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/tv_user_movies_all_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/user_movies_all"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_history_detail_ts"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/user_history_detail_betweed2"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/user_tv_movies_all_num"
+                    android:text="0"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_history_detail_ts"/>
+
+
+                <TextView
+                    android:id="@+id/tv_user_movies_downloaded_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/user_history_detail_betweed"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/user_in_date"
+                    android:singleLine="true"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_history_detail_ts"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/user_history_detail_betweed2"
+                    android:id="@+id/tv_user_movies_unexpired_num"
+                    android:layout_gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_history_detail_ts"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/user_history_detail_betweed"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/user_out_date"
+                    android:singleLine="true"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_history_detail_ts"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/user_history_detail_betweed2"
+                    android:id="@+id/user_tv_movies_expired_num"
+                    android:layout_gravity="center_vertical"
+                    android:text="0"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_history_detail_ts"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/user_history_list_mg_t"
+                android:orientation="horizontal">
+
+                <com.golive.cinema.views.metroviews.widget.TvRecyclerView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/hListView_user_movies"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/history_list_h"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:clipToPadding="false"
+                    android:paddingLeft="@dimen/user_history_margin_l"
+                    android:paddingRight="@dimen/user_history_margin_l"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    app:tv_isMenu="true"
+                    app:tv_isSelectFirstVisiblePosition="true"
+                    app:tv_layoutManager="ListLayoutManager"
+                    app:tv_selectedItemIsCentered="true"/>
+
+
+                <Button
+                    android:id="@+id/user_history_edit_btn"
+                    android:layout_width="@dimen/history_btn_edit_w"
+                    android:layout_height="@dimen/center_button_hight"
+                    android:layout_marginBottom="@dimen/history_btn_edit_mg_b"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/sel_user_button_bg"
+                    android:text="@string/history_into_edit"
+                    android:textSize="@dimen/history_btn_edit_ts"
+                    android:textColor="@color/color_ee"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- no item view-->
+        <include
+            android:id="@+id/user_history_have_no_item_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/user_history_noitem"/>
+
+        <!-- waiting view-->
+        <include
+            android:id="@+id/user_history_waiting_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            layout="@layout/user_history_waiting"/>
+
+
+    </FrameLayout>
+
+</LinearLayout>

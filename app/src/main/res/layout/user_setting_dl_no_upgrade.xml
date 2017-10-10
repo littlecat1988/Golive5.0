@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#CF000000"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/user_center_no_upgrade_layout_width"
+        android:layout_height="@dimen/user_center_no_upgrade_layout_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/setting_language_dl_margin_t"
+        android:background="@drawable/user_setting_dialog_shape_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/user_setting_dl_no_upgrade_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/user_center_no_upgrade_title_top"
+            android:lineSpacingMultiplier="1.42"
+            android:text="@string/setting_version_update"
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/user_center_no_upgrade_title_size"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/user_center_no_upgrade_layout2_top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_setting_dl_no_upgrade_tv1"
+                android:layout_width="@dimen/user_center_no_upgrade_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/user_center_no_upgrade_text_left"
+                android:gravity="left"
+                android:lineSpacingMultiplier="1.42"
+                android:text="@string/setting_version_top_new"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/user_center_no_upgrade_text_size"/>
+
+            <TextView
+                android:id="@+id/user_setting_dl_no_upgrade_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_setting_dl_no_upgrade_tv1"
+                android:layout_alignLeft="@id/user_setting_dl_no_upgrade_tv1"
+                android:gravity="left"
+                android:lineSpacingMultiplier="1.42"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/user_center_no_upgrade_text_size"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/user_setting_dl_no_upgrade_btn"
+            android:layout_width="@dimen/user_setting_language_btn_w"
+            android:layout_height="@dimen/center_button_hight"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/user_center_no_upgrade_btn_top"
+            android:background="@drawable/sel_user_button_bg"
+            android:gravity="center"
+            android:text="@string/user_empty_ok"
+            android:textColor="@color/sel_user_color_info_text"
+            android:textSize="@dimen/user_center_no_upgrade_btn_size"/>
+    </LinearLayout>
+</LinearLayout>

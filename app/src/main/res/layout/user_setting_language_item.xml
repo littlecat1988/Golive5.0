@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:background="@android:color/transparent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="@dimen/user_setting_language_btn_w"
+        android:layout_height="@dimen/center_button_hight"
+        android:background="@drawable/sel_user_setting_language_btn"
+        android:id="@+id/setting_language_name_btn"
+        android:text=""
+        android:textColor="@color/sel_user_color_info_text"
+        android:textSize="@dimen/user_setting_language_btn_ts"
+        android:gravity="center"/>
+
+
+</LinearLayout>
+

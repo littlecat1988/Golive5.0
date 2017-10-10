@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:id="@+id/player_water_mark_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:id="@+id/player_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/player_advert"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone"/>-->
+
+    <FrameLayout
+        android:id="@+id/player_busy_view"
+        android:layout_width="@dimen/play_network_speed_min_w"
+        android:layout_height="@dimen/play_network_speed_min_w"
+        android:layout_gravity="center"
+        android:background="@drawable/play_network_speed_bar_circle"
+        android:visibility="gone"/>
+
+    <!--
+    <include
+        layout="@layout/player_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="@dimen/player_vg_progress_margin_top"/>
+        -->
+</FrameLayout>

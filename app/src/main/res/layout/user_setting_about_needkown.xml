@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/user_setting_need_kown_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/setting_about_title_mg_t"
+        android:gravity="center_horizontal"
+        android:text="@string/setting_movie_watch_need_kown"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/user_set_needknow_title_size"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/user_set_needknow_layout_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/user_set_needknow_layout_bottom"
+            android:layout_marginLeft="@dimen/user_set_needknow_layout_left"
+            android:layout_marginRight="@dimen/user_set_needknow_layout_right">
+
+            <TextView
+                android:id="@+id/user_setting_need_kown_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:descendantFocusability="beforeDescendants"
+                android:gravity="left"
+                android:lineSpacingExtra="@dimen/user_set_needknow_detail_line"
+                android:lineSpacingMultiplier="1.42"
+                android:paddingRight="@dimen/user_set_needknow_detail_right"
+                android:text=""
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/user_set_needknow_detail_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/user_set_needknow_layout2_bottom">
+
+            <Button
+                android:id="@+id/user_setting_needkown_kownbtn"
+                android:layout_width="@dimen/user_set_needknow_btn_width"
+                android:layout_height="@dimen/user_set_needknow_btn_height"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/sel_user_button_bg"
+                android:gravity="center"
+                android:text="@string/finance_message_cancel_btn_text"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/user_set_needknow_btn_size"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myinfo_credit_title_mg_t"
+        android:layout_marginLeft="@dimen/myinfo_credit_title_mg_l"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:id="@+id/user_info_vip_start_title_tv"
+        android:text="@string/myinfo_credit_acount_info"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/myinfo_credit_title_ts"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/myinfo_detail_mg_t"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="@dimen/myinfo_credit_name_w"
+                android:layout_height="wrap_content"
+                android:text="@string/myinfo_user_credit_max_name"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/color_ee"
+                android:gravity="left"/>
+            <TextView
+                android:id="@+id/user_credit_max"
+                android:layout_width="@dimen/myinfo_credit_price_w"
+                android:layout_height="wrap_content"
+                android:text="@string/user_zero_money"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/color_ee"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/myinfo_credit_tv_bw_mg_t"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="@dimen/myinfo_credit_name_w"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_canused_name"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/color_ee"
+                android:gravity="left"/>
+            <TextView
+                android:id="@+id/user_credit_can_used_num"
+                android:layout_width="@dimen/myinfo_credit_price_w"
+                android:layout_height="wrap_content"
+                android:text="@string/user_zero_money"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/color_ee"
+                android:gravity="right"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/myinfo_credit_tv_bw_mg_t"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="@dimen/myinfo_credit_name_w"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_need_pay_name"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/color_ee"
+                android:gravity="left"/>
+            <TextView
+                android:id="@+id/user_credit_need_pay"
+                android:layout_width="@dimen/myinfo_credit_price_w"
+                android:layout_height="wrap_content"
+                android:text="@string/user_zero_money"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/color_ee"
+                android:gravity="right"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/myinfo_credit_btn_mg_t"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/user_credit_btn_pay"
+                android:layout_width="@dimen/myinfo_credit_btn_h"
+                android:layout_height="@dimen/center_button_hight"
+                android:text="@string/credit_btn_pay_yuan"
+                android:background="@drawable/sel_user_button_bg"
+                android:textSize="@dimen/myinfo_credit_pay_detail_ts"
+                android:textColor="@color/info_credit_text_hui"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/user_credit_buttom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/vip_qrcode_bottom_t_mg_b"
+        android:text="@string/user_credit_bottom_tips"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.52"
+        android:textSize="@dimen/vip_qrcode_bottom_t_ts"
+        android:textColor="@color/vip_text_hui"/>
+
+
+</RelativeLayout>

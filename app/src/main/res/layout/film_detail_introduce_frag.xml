@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/film_detail_introduce_padding_h"
+    android:paddingTop="@dimen/film_detail_introduce_padding_h">
+
+    <TextView
+        android:id="@+id/film_detail_introduce_tv"
+        style="@style/film_detail_txt_introduce_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/film_detail_introduce_content_height"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/film_detail_introduce_content_margin_w"
+        android:layout_marginStart="@dimen/film_detail_introduce_content_margin_w"
+        android:fadeScrollbars="false"
+        android:fadingEdge="vertical"
+        android:lineSpacingExtra="@dimen/film_detail_introduce_content_line_space"
+        android:paddingLeft="@dimen/film_detail_introduce_content_padding_left"
+        android:paddingRight="@dimen/film_detail_introduce_content_padding_right"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="@dimen/film_detail_introduce_scrollview_barsize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarThumbVertical="@drawable/user_consumtion_list_thumb"
+        android:scrollbarTrackVertical="@drawable/user_consumtion_list_track"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/film_detail_introduce_content_font_size"/>
+
+</RelativeLayout>

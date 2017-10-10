@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/user_pay_qrcode_bottom_text"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/base_qrcode_bottom_text_mg_b"
+        android:layout_marginTop="@dimen/base_qrcode_bottom_text_mg_t">
+        <TextView
+            android:id="@+id/user_pay_qrcode_tv_please"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qrcode_pay_qrtxt_1"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/base_qrcode_bottom_tv_ts"
+            android:textColor="@color/color_ee"/>
+        <ImageView
+            android:id="@+id/user_pay_qrcode_image_wechat"
+            android:layout_width="@dimen/base_qrcode_bottom_image_w"
+            android:layout_height="@dimen/base_qrcode_bottom_image_w"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/wechat_small"/>
+        <TextView
+            android:id="@+id/user_pay_qrcode_tv_and"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qrcode_pay_qrtxt_2"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/base_qrcode_bottom_tv_ts"
+            android:textColor="@color/color_ee"/>
+        <ImageView
+            android:id="@+id/user_pay_qrcode_image_alipay"
+            android:layout_width="@dimen/base_qrcode_bottom_image_w"
+            android:layout_height="@dimen/base_qrcode_bottom_image_w"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/alipay_small"/>
+        <TextView
+            android:id="@+id/user_pay_qrcode_tv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qrcode_pay_qrtxt_3"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/base_qrcode_bottom_tv_ts"
+            android:textColor="@color/color_ee"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/user_pay_qrcode_bigview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/user_pay_qrcode_bottom_text"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top|center_horizontal">
+
+        <ImageView
+            android:id="@+id/user_pay_qrcode_default_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:src="@drawable/wechat_icon"
+            android:layout_gravity="center_vertical"/>
+        <RelativeLayout
+            android:id="@+id/user_pay_qrcode_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="center"
+            android:visibility="gone">
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

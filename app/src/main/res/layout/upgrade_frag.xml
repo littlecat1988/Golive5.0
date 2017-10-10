@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_upgrade_bg"/>
+
+    <TextView
+        android:id="@+id/upgrade_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/upgrade_dialog_title_top"
+        android:gravity="center"
+        android:text="@string/dialog_update_info_title"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_title_size"/>
+
+    <TextView
+        android:id="@+id/upgrade_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upgrade_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_btn_top"
+        android:gravity="center"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_text_size"/>
+
+    <include
+        android:id="@+id/app_download_layout"
+        layout="@layout/upgrade_download_progress"
+        android:layout_width="@dimen/upgrade_progress_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upgrade_content_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/upgrade_progress_top"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/upgrade_click_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upgrade_content_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_btn_top">
+
+        <Button
+            android:id="@+id/commit_btn"
+            style="@style/init_commit_btn_style"
+            android:layout_width="@dimen/alert_dialog_btn_width"
+            android:layout_height="@dimen/alert_dialog_btn_height">
+
+            <requestFocus/>
+        </Button>
+
+        <Button
+            android:id="@+id/cancel_btn"
+            style="@style/init_commit_btn_style"
+            android:layout_width="@dimen/alert_dialog_btn_width"
+            android:layout_height="@dimen/alert_dialog_btn_height"
+            android:layout_below="@id/commit_btn"
+            android:layout_marginTop="@dimen/alert_dialog_btn2_top"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/service_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/alert_dialog_phone_bottom"
+        android:textColor="@color/init_exit_dialog_phone_color"
+        android:textSize="@dimen/alert_dialog_phone_size"/>
+</RelativeLayout>

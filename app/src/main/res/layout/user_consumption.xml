@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/user_cusumption_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/cusumption_title_mg_l"
+        android:layout_marginTop="@dimen/cusumption_title_mg_t"
+        android:text="@string/user_my_consumption"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/cusumption_title_ts"/>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/cusumption_list_mg_b"
+        android:layout_marginLeft="@dimen/cusumption_list_mg_l"
+        android:layout_marginRight="@dimen/cusumption_list_mg_r"
+        android:layout_marginTop="@dimen/cusumption_list_mg_t">
+
+        <ImageView
+            android:id="@+id/user_wallet_bg_image"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <ListView
+            android:id="@+id/user_lv_consumtion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@drawable/user_comsumtion_shaw_line"
+            android:dividerHeight="@dimen/cusumption_list_divider_height"
+            android:fadeScrollbars="false"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="@dimen/cusumption_list_fad_length"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@drawable/sel_user_info_poster"
+            android:minHeight="@dimen/cusumption_list_min_h"
+            android:paddingRight="@dimen/cusumption_list_pad_r"
+            android:requiresFadingEdge="vertical"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarSize="@dimen/cusumption_list_scroll_w"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/user_consumtion_list_thumb"
+            android:scrollbarTrackVertical="@drawable/user_consumtion_list_track"
+            android:scrollbars="vertical"/>
+    </FrameLayout>
+
+
+    <!--<RelativeLayout
+        android:id="@+id/user_consumption_no_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/consumtion_no_item_view_mg_lr"
+        android:layout_marginRight="@dimen/consumtion_no_item_view_mg_lr"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dialog_prompt_icon_size"
+                android:layout_height="@dimen/dialog_prompt_icon_size"
+                android:gravity="left"
+                android:src="@drawable/popup_ico_prompt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/consumtion_tv_empty_mg_l"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:text="@string/consumtion_have_no_date"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/center_button_textsize"/>
+        </LinearLayout>
+    </RelativeLayout>-->
+
+    <include
+        android:id="@+id/user_consumption_no_item_view"
+        layout="@layout/simple_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>
+

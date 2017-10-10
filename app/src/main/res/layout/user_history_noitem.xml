@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/user_history_noitem_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/history_comm_title_mg_t"
+        android:text="@string/history_you_have_no_record"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/history_comm_title_ts" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/history_comm_list_mg_l"
+        android:layout_marginRight="@dimen/history_comm_list_mg_l"
+        android:layout_marginTop="@dimen/history_comm_list_mg_t"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/user_history_img1"
+            android:layout_width="@dimen/history_list_img1_w"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/user_history_img2"
+            android:layout_width="@dimen/history_list_img2_w"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/user_history_img3"
+            android:layout_width="@dimen/history_list_img3_w"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <com.golive.cinema.views.metroviews.widget.TvRecyclerView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/user_history_noitem_recommend_listview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/history_comm_list_h"
+            android:orientation="horizontal"
+            android:padding="@dimen/history_comm_list_padding"
+            android:scrollbars="none"
+            app:tv_layoutManager="ListLayoutManager"
+            app:tv_selectedItemOffsetEnd="1dp"
+            app:tv_selectedItemOffsetStart="1dp" />
+    </LinearLayout>
+</LinearLayout>

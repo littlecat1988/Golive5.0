@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/item_background"
+             android:clickable="true"
+             android:focusable="true"
+             android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/item_default_color">
+
+        <ImageView
+            android:id="@+id/default_iv"
+            android:layout_width="@dimen/item_logo_width"
+            android:layout_height="@dimen/item_logo_height"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/golive_logo_gray"/>
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/poster_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/recommend_item_prompt_margin_top"
+            android:layout_marginTop="@dimen/recommend_item_prompt_margin_top"
+            android:background="@drawable/poster_bg_prompt"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/recommend_item_prompt_margin_top"
+            android:paddingRight="@dimen/recommend_item_prompt_margin_top"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/recommend_item_prompt_text_size"/>
+
+        <ImageView
+            android:id="@+id/subscript_image"
+            android:layout_width="@dimen/recommend_item_subscript_width"
+            android:layout_height="@dimen/recommend_item_subscript_width"
+            android:layout_gravity="right"
+            android:scaleType="fitXY"/>
+
+        <com.golive.cinema.views.RotateTextView
+            android:id="@+id/subscript_text"
+            android:layout_width="@dimen/recommend_item_subscript_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/recommend_item_subscript_text_top"
+            android:layout_marginTop="@dimen/recommend_item_subscript_text_top"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/recommend_item_subscript_text_size"/>
+
+        <TextView
+            android:id="@+id/load_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/loading"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/recommend_item_title_text_size"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/recommend_item_title_margin_bottom"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/recommend_item_title_text_size"/>
+    </FrameLayout>
+</FrameLayout>

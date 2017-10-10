@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/download_sel_media_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/download_error"
+        android:textSize="@dimen/download_err_title_font_size"/>
+
+    <TextView
+        android:id="@+id/description_tv"
+        style="@style/download_sel_media_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/download_err_content_margin_top"
+        android:maxWidth="@dimen/download_err_content_max_width"
+        android:text="@string/download_error_description"
+        android:textSize="@dimen/download_err_content_font_size"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/download_err_btn_margin_top"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/redownload_btn"
+            style="@style/download_sel_btn"
+            android:layout_width="@dimen/download_restore_storage_btn_width"
+            android:layout_height="@dimen/download_restore_storage_btn_height"
+            android:layout_marginRight="@dimen/download_restore_storage_btn_margin_left"
+            android:text="@string/download_restore_storage_redownload"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/ok_btn"
+            style="@style/download_sel_btn"
+            android:layout_width="@dimen/download_restore_storage_btn_width"
+            android:layout_height="@dimen/download_restore_storage_btn_height"
+            android:text="@string/ok"/>
+    </LinearLayout>
+</LinearLayout>

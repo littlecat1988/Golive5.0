@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/exit_film_detail_recommend_title"
+        style="@style/film_detail_txt_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/film_detail_recommend_for_you_margin_top_player"
+        android:lines="1"
+        android:text="@string/film_detail_recommended_player_title"
+        android:textSize="@dimen/film_detail_txt_recommend_font_size_player"
+        android:textColor="@color/color_ee"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/exit_film_detail_recommend_poster_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/film_detail_recommend_for_you_padding_player"
+        android:clipToPadding="false"
+        android:layout_marginTop="@dimen/film_detail_recommend_poster_margin_top_player"
+        android:descendantFocusability="afterDescendants"/>
+
+    <TextView
+        android:id="@+id/exit_film_detail_recommend_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exit_film_detail_recommend_poster_list"
+        android:layout_marginTop="@dimen/film_detail_txt_recommend_player_tips_top"
+        android:layout_centerHorizontal="true"
+        android:lines="1"
+        android:text="@string/exit_dialog_recommend_movie_text"
+        android:textSize="@dimen/film_detail_txt_recommend_font_size_player_tips"
+        android:textColor="@color/color_ee"/>
+
+    <RelativeLayout
+        android:id="@+id/exit_film_detail_recommend_operate_layout"
+        android:layout_width="@dimen/player_recommend_btn_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exit_film_detail_recommend_tips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/player_recommend_btn_layout_top">
+
+        <Button
+            android:id="@+id/exit_film_detail_recommend_cancel_btn"
+            android:layout_width="@dimen/player_recommend_btn_width"
+            android:layout_height="@dimen/player_recommend_btn_height"
+            android:layout_alignParentLeft="true"
+            android:text="@string/exit_dialog_recommend_movie_cancel"
+            style="@style/init_commit_btn_style">
+            <requestFocus/>
+        </Button>
+        <Button
+            android:id="@+id/exit_film_detail_recommend_commit_btn"
+            android:layout_width="@dimen/player_recommend_btn_width"
+            android:layout_height="@dimen/player_recommend_btn_height"
+            android:layout_alignParentRight="true"
+            android:text="@string/exit_dialog_recommend_movie_commit"
+            style="@style/init_commit_btn_style"/>
+    </RelativeLayout>
+
+</RelativeLayout>

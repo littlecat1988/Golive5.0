@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true">
+
+    <com.golive.cinema.views.AlwaysMarqueeTextView
+        android:id="@+id/message_marquee_tv"
+        android:layout_width="@dimen/main_message_marquee_text_max_width"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:paddingTop="@dimen/main_message_marquee_text_top_padding"
+        android:singleLine="true"
+        android:textColor="@color/main_message_marquee_text_color"
+        android:textSize="@dimen/main_message_marquee_text_size"/>
+
+    <RelativeLayout
+        android:id="@+id/user_status_bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/golive_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_golive_user_name_right_margin"
+            android:gravity="center"
+            android:textColor="@color/main_message_marquee_text_color"
+            android:textSize="@dimen/main_golive_user_name_size"/>
+
+        <ImageView
+            android:id="@+id/status_user_header_iv"
+            android:layout_width="@dimen/main_status_user_header_iv_width_height"
+            android:layout_height="@dimen/main_status_user_header_iv_width_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/main_status_user_header_iv_right_margin"
+            android:layout_toLeftOf="@id/golive_user_name"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+    <!--  <ImageView
+          android:id="@+id/user_head_iv"
+          android:layout_width="28.66dp"
+          android:layout_height="28.66dp"
+          android:layout_toLeftOf="@id/golive_user_name"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="14dp"
+          android:clickable="true"
+          android:focusable="true"
+          android:focusableInTouchMode="true"
+          android:nextFocusLeft="@+id/user_message_image_iv"
+          android:nextFocusUp="@id/user_head_iv"
+          android:nextFocusRight="@id/user_head_iv"
+          android:scaleType="fitXY"
+          android:src="@drawable/user_hr_image_selector"/>
+      -->
+    <!--
+        <RelativeLayout
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/status_user_header_iv" >
+            <ImageView
+                android:id="@+id/user_message_image_iv"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nextFocusLeft="@id/user_message_image_iv"
+                android:nextFocusUp="@id/user_message_image_iv"
+                android:nextFocusRight="@id/status_user_header_iv"
+                android:scaleType="fitXY"
+                android:src="@drawable/user_message_image_selector" />
+            <ImageView
+                android:id="@+id/statusbar_message_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="2dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/user_message_red" />
+        </RelativeLayout>
+        -->
+</RelativeLayout>

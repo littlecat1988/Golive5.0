@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btn"
+        style="@style/download_sel_btn"
+        android:layout_width="@dimen/download_sel_media_btn_width"
+        android:layout_height="@dimen/download_sel_media_btn_height"/>
+
+    <TextView
+        android:id="@+id/download_time_tv"
+        style="@style/download_sel_media_txt_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/download_sel_media_time_estimate_margin_top"
+        android:text="@string/download_sel_media_time_estimated"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/recommend_tv"
+        style="@style/download_sel_media_txt_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/download_sel_media_recommend_margin_top"
+        android:text="@string/download_sel_media_recommend"
+        android:visibility="gone"/>
+
+</LinearLayout>

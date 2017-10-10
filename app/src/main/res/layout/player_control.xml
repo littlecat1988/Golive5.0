@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/media_control_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/player_control_parent_layout_height"
+        android:layout_gravity="bottom|center">
+
+        <ImageView
+            android:id="@+id/play_status"
+            android:layout_width="@dimen/player_control_status_width_height"
+            android:layout_height="@dimen/player_control_status_width_height"
+            android:layout_marginLeft="@dimen/player_control_status_margin_left"
+            android:layout_marginTop="@dimen/player_control_status_margin_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/media_play"/>
+
+        <RelativeLayout
+            android:id="@+id/seek_bar_parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/player_control_seek_bar_parent_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/player_vg_progress_bar_margin_bottom"
+            android:layout_marginLeft="@dimen/player_vg_progress_bar_margin_left"
+            android:layout_marginRight="@dimen/player_vg_progress_bar_margin_right">
+
+            <com.golive.cinema.views.DragControlSeekBar
+                android:id="@+id/theatre_play_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:maxHeight="@dimen/player_control_seek_bar_parent_height"
+                android:padding="@dimen/player_control_play_progress_padding"
+                android:progressDrawable="@drawable/player_seekbar_style"
+                android:thumb="@null"/>
+
+            <ImageView
+                android:id="@+id/theatre_play_progress_thumb"
+                android:layout_width="@dimen/player_thumb_width"
+                android:layout_height="@dimen/player_thumb_height"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@color/player_seekbar_secondary_bg"
+                android:layout_marginLeft="@dimen/player_control_progress_thumb_margin_left"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/theatre_play_title"
+            style="@style/player_txt_white_small"
+            android:textSize="@dimen/player_control_play_title_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/player_control_play_title_margin_top"
+            android:layout_marginLeft="@dimen/player_control_play_title_margin_left"/>
+
+
+        <TextView
+            android:id="@+id/theatre_play_tv_time_current"
+            style="@style/player_txt_white_small"
+            android:textSize="@dimen/player_control_play_time_current_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/theatre_play_title"
+            android:layout_below="@id/theatre_play_title"
+            android:layout_marginTop="@dimen/player_control_time_current_margin_top"
+            android:text="@string/theatre_play_current_total_text"/>
+
+        <ImageView
+            android:id="@+id/theatre_play_tv_time_line"
+            android:layout_width="@dimen/player_control_time_line_width"
+            android:layout_height="@dimen/player_control_time_line_height"
+            android:layout_toRightOf="@id/theatre_play_tv_time_current"
+            android:layout_alignTop="@id/theatre_play_tv_time_current"
+            android:layout_marginLeft="@dimen/player_control_time_line_margin_left_right"
+            android:layout_marginTop="@dimen/player_control_time_line_margin_top"
+            android:layout_marginRight="@dimen/player_control_time_line_margin_left_right"
+            android:background="@color/color_ee"/>
+
+        <TextView
+            android:id="@+id/theatre_play_tv_time_total"
+            style="@style/player_txt_white_small"
+            android:textSize="@dimen/player_control_play_time_current_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/theatre_play_tv_time_line"
+            android:layout_alignTop="@id/theatre_play_tv_time_current"
+            android:text="@string/theatre_play_current_total_text"/>
+
+        <RelativeLayout
+            android:id="@+id/theatre_play_clarity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

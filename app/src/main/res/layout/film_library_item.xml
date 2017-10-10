@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Copyright (C) 2012 Lucas Rocha
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="@dimen/film_library_item_width"
+             android:layout_height="match_parent"
+             android:background="@drawable/film_library_shadow"
+             android:clickable="true"
+             android:focusable="true"
+             android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/movie_init_bkg"
+            android:id="@+id/poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/film_library_item_title_tv_font_size"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/poster_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/theater_sync_item_prompt_margin_top"
+            android:layout_marginTop="@dimen/theater_sync_item_prompt_margin_top"
+            android:background="@drawable/poster_bg_prompt"
+            android:paddingLeft="@dimen/theater_sync_item_prompt_margin_top"
+            android:paddingRight="@dimen/theater_sync_item_prompt_margin_top"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/film_library_item_prompt_text_size"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/script_bg"
+            android:layout_width="@dimen/film_library_item_script_width"
+            android:layout_height="@dimen/film_library_item_script_width"
+            android:layout_gravity="right"
+            android:scaleType="fitXY"/>
+
+        <com.golive.cinema.views.RotateTextView
+            android:id="@+id/script_text"
+            android:layout_width="@dimen/film_library_item_script_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/film_library_item_script_text_top"
+            android:layout_marginTop="@dimen/film_library_item_script_text_top"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/film_library_item_script_text_size"/>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/user_custom_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/custom_title_mg_l"
+        android:layout_marginTop="@dimen/custom_title_mg_t"
+        android:text="@string/custom_title_service"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/custom_title_ts"/>
+
+    <RelativeLayout
+        android:id="@+id/custom_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/custom_list_mg_b"
+        android:layout_marginLeft="@dimen/custom_list_mg_lr"
+        android:layout_marginRight="@dimen/custom_list_mg_lr"
+        android:layout_marginTop="@dimen/custom_list_mg_t"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/custom_item_w"
+            android:layout_height="@dimen/custom_item_h"
+            android:background="#10ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/custom_item_title_mg_t"
+                android:text="@string/custom_prompt"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/custom_item_about_ts_s"/>
+
+            <TextView
+                android:id="@+id/tv_custom_item_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_num_ml"
+                android:layout_marginTop="@dimen/custom_item_about_t_mg"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/custom_item_num_ts"/>
+
+            <TextView
+                android:id="@+id/tv_custom_item_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_num_ml"
+                android:layout_marginTop="@dimen/custom_item_num_mg"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/custom_item_num_ts"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/custom_item_w"
+            android:layout_height="@dimen/custom_item_h2"
+            android:layout_marginTop="@dimen/custom_item_top"
+            android:background="#10ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/custom_item_title_mg_t"
+                android:text="@string/custom_follow"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/custom_item_about_ts_s"/>
+
+            <ImageView
+                android:id="@+id/imag_head_icon"
+                android:layout_width="@dimen/custom_item_image_qrcode_w"
+                android:layout_height="@dimen/custom_item_image_qrcode_w"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/custom_item_image_qrcode_mg_t"/>
+
+            <TextView
+                android:id="@+id/tv_custom_item_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/custom_item_num_mg"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/custom_item_num_ts"/>
+        </LinearLayout>
+
+        <!--系统信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/custom_item_about_tv_mg_l"
+            android:background="#10ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/custom_item_bottom_mg"
+                android:text="@string/custom_about"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/custom_item_title_ts"/>
+
+            <com.golive.cinema.views.AlwaysMarqueeTextView
+                android:id="@+id/tv_setting_about_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_about_text_l"
+                android:layout_marginTop="@dimen/custom_item_bottom_mg_t"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_cc"
+                android:textSize="@dimen/custom_item_about_ts"/>
+
+            <com.golive.cinema.views.AlwaysMarqueeTextView
+                android:id="@+id/tv_setting_about_kdm_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_about_text_l"
+                android:layout_marginTop="@dimen/custom_item_about_t_mg"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_cc"
+                android:textSize="@dimen/custom_item_about_ts"
+                android:visibility="gone"/>
+
+            <com.golive.cinema.views.AlwaysMarqueeTextView
+                android:id="@+id/tv_setting_about_device_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_about_text_l"
+                android:layout_marginTop="@dimen/custom_item_about_t_mg"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_cc"
+                android:textSize="@dimen/custom_item_about_ts"/>
+
+            <com.golive.cinema.views.AlwaysMarqueeTextView
+                android:id="@+id/tv_setting_about_mac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_about_text_l"
+                android:layout_marginTop="@dimen/custom_item_about_t_mg"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_cc"
+                android:textSize="@dimen/custom_item_about_ts"/>
+
+            <com.golive.cinema.views.AlwaysMarqueeTextView
+                android:id="@+id/tv_setting_about_netip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/custom_item_about_text_l"
+                android:layout_marginTop="@dimen/custom_item_about_t_mg"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/color_cc"
+                android:textSize="@dimen/custom_item_about_ts"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/user_message_detail_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/message_title_margin_top"
+        android:text="@string/user_center_tab_message"
+        android:textSize="@dimen/message_title_ts"
+        android:textColor="@color/color_ee"/>
+
+    <ImageView
+        android:id="@+id/message_detail_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/message_detail_image_mg_l"
+        android:layout_marginTop="@dimen/message_detail_image_mg_t"
+        android:scaleType="fitXY"
+        android:src="@drawable/user_message_icon_open"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/message_detail_view_mg_l"
+        android:layout_marginTop="@dimen/message_detail_view_mg_t"
+        android:layout_marginRight="@dimen/message_detail_view_mg_r"
+        android:layout_marginBottom="@dimen/message_detail_view_mg_b"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical"
+        android:scrollbarSize="@dimen/message_list_scrollbarsize"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarThumbVertical="@drawable/user_message_listview_thumb"
+        android:scrollbarTrackVertical="@drawable/user_message_listview_track">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/message_detail_info_mg_r"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/message_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="left|center_vertical"
+                    android:lineSpacingMultiplier="1.3"
+                    android:lines="1"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/message_detail_name_ts"/>
+
+                <TextView
+                    android:id="@+id/message_detail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/message_detail_time_margin_right"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="right|center_vertical"
+                    android:layout_marginTop="@dimen/message_detail_time_margin_top"
+                    android:lineSpacingMultiplier="1.5"
+                    android:lines="1"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/message_detail_time_ts"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/message_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/message_detail_content_t"
+                android:layout_marginBottom="@dimen/message_detail_content_b"
+                android:gravity="left|center_vertical"
+                android:lineSpacingExtra="@dimen/message_detail_content_vls"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/message_detail_content_ts"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

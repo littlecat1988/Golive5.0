@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/recommend_layout_margin_top">
+
+    <TextView
+        android:id="@+id/recommend_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/recommend_title_margin_left"
+        android:layout_marginTop="@dimen/recommend_title_margin_top"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/recommend_title_text_size" />
+
+    <com.golive.cinema.views.metroviews.widget.TvRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/recommend_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/recommend_recycler_view_margin_bottom"
+        android:layout_marginTop="@dimen/recommend_recycler_view_margin_top"
+        android:orientation="horizontal"
+        android:padding="@dimen/recommend_recycler_view_padding"
+        android:scrollbars="none"
+        app:tv_itemExtendwidth="@dimen/recycler_view_item_width"
+        app:tv_layoutManager="SpannableGridLayoutManager"
+        app:tv_numColumns="5"
+        app:tv_numRows="3"
+        app:tv_selectedItemOffsetEnd="@dimen/recommend_recycler_view_offset"
+        app:tv_selectedItemOffsetStart="@dimen/recommend_recycler_view_offset" />
+</RelativeLayout>

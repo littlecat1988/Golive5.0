@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/user_info_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/myinfo_title_name_mg_t"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/myinfo_title_name"
+            android:textSize="@dimen/vip_package_vip_title_size"
+            android:textColor="@color/color_ee"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/myinfo_view_mg_l"
+            android:layout_marginRight="@dimen/myinfo_view_mg_r"
+            android:layout_marginBottom="@dimen/myinfo_view_mg_b"
+            android:layout_marginTop="@dimen/myinfo_view_mg_t">
+
+            <ImageView
+                android:id="@+id/user_info_bg_image"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <ListView
+                android:id="@+id/user_info_lv_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingRight="@dimen/myinfo_list_pad_r"
+                android:listSelector="@drawable/sel_user_info_poster"
+                android:cacheColorHint="@color/translucent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/myinfo_list_driver"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="@dimen/myinfo_list_edge"
+                android:requiresFadingEdge="vertical"
+                android:fadeScrollbars="false"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:scrollbarSize="@dimen/cusumption_list_scroll_w"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarFadeDuration="0"
+                android:scrollbarThumbVertical="@drawable/user_consumtion_list_thumb"
+                android:scrollbarTrackVertical="@drawable/user_consumtion_list_track"
+                android:descendantFocusability="beforeDescendants"/>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

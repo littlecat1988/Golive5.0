@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/phonenumber_login_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step1_layout_top"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phone_number_string_detail1"
+            android:textColor="@color/phonenumber_color_d0d0d0"
+            android:textSize="@dimen/repeat_mac_step1_tip1_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/repeat_mac_step1_tip2_top"
+            android:text="@string/phone_number_string_detail15"
+            android:textColor="@color/phonenumber_color_acacac"
+            android:textSize="@dimen/repeat_mac_step1_tip2_size"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/phone_mac_login_bt_edit_text"
+        android:layout_width="@dimen/repeat_mac_step1_etext_w"
+        android:layout_height="@dimen/repeat_mac_step1_etext_h"
+        android:layout_below="@id/phonenumber_login_linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step1_etext_top"
+        android:background="@drawable/dialog_edit_text_selector"
+        android:digits="0123456789"
+        android:gravity="left|center_vertical"
+        android:hint="@string/phone_number_string_detail3"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/repeat_mac_step1_etext_left"
+        android:paddingRight="@dimen/repeat_mac_step1_etext_left"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/count_down_circle_per_text_color"
+        android:textColorHint="@color/common_edittext_hint_color"
+        android:textSize="@dimen/repeat_mac_step1_etext_size"/>
+
+
+    <Button
+        android:id="@+id/phone_mac_login_bt_sure"
+        style="@style/init_commit_btn_style"
+        android:layout_width="@dimen/repeat_mac_step1_btn_w"
+        android:layout_height="@dimen/repeat_mac_step1_btn_h"
+        android:layout_below="@id/phone_mac_login_bt_edit_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step1_btn_top"
+        android:text="@string/phone_number_string_detail6"/>
+
+    <TextView
+        android:id="@+id/phone_mac_login_error_detail_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_mac_login_bt_sure"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step1_err_top"
+        android:lineSpacingExtra="@dimen/phonenumber_login_view_golive_lineSpacing"
+        android:textColor="@color/phonenumber_color_686868"
+        android:textSize="@dimen/repeat_mac_step1_err_size"
+        android:visibility="gone"/>
+
+</RelativeLayout>

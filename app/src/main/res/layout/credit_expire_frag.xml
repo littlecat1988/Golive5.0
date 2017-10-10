@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/credit_expire_title_margin_top"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/confirm_purchase_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credit_expire_title"/>
+
+        <TextView
+            android:id="@+id/credit_expire_content"
+            style="@style/confirm_purchase_txt_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/credit_expire_content_margin_top"
+            android:lineSpacingExtra="@dimen/credit_expire_content_line_space"
+            android:text="@string/credit_expire_content"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/credit_expire_btn_margin_top"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/credit_expire_refund_btn"
+                style="@style/confirm_purchase_btn"
+                android:layout_width="@dimen/credit_expire_btn_width"
+                android:layout_height="@dimen/credit_expire_btn_height"
+                android:text="@string/credit_expire_refund"/>
+
+            <Button
+                android:id="@+id/credit_expire_notice_later_btn"
+                style="@style/confirm_purchase_btn"
+                android:layout_width="@dimen/credit_expire_btn_width"
+                android:layout_height="@dimen/credit_expire_btn_height"
+                android:layout_marginLeft="@dimen/credit_expire_btn_margin_h"
+                android:text="@string/credit_expire_notice_later"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/credit_expire_notice_tv"
+        style="@style/confirm_purchase_txt_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/credit_expire_introduce_margin_bottom"
+        android:text="@string/purchase_help_credit_pay_not_deadline"/>
+</RelativeLayout>

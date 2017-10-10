@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/center_title_margintop">
+
+        <TextView
+            android:id="@+id/user_buyvip_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/vip_package_vip_title_size"/>
+
+        <include
+            layout="@layout/exit_dialog_vip_freedom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/vip_bottom_text_mg_b"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_buyvip_title_tv"
+            android:layout_marginLeft="@dimen/vip_list_mg_l"
+            android:layout_marginRight="@dimen/vip_list_mg_l"
+            android:layout_marginTop="@dimen/vip_list_mg_t"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.golive.cinema.views.metroviews.widget.TvRecyclerView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/buy_vip_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/vip_item_hight"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                app:tv_layoutManager="ListLayoutManager"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

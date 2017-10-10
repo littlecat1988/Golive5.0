@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/init_exit_dialog_vip_freedom_height"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/init_exit_dialog_vip_freedom_text1"
+        android:textColor="@color/vip_text_hui"
+        android:textSize="@dimen/vip_bottom_textsize"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/init_exit_dialog_vip_freedom_star_left_margin"
+        android:layout_marginRight="@dimen/init_exit_dialog_vip_freedom_star_right_margin"
+        android:layout_marginBottom="@dimen/init_exit_dialog_vip_freedom_margin_w"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ico_star_green"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/init_exit_dialog_vip_freedom_text2"
+        android:textColor="@color/vip_text_hui"
+        android:textSize="@dimen/vip_bottom_textsize"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/init_exit_dialog_vip_freedom_star_left_margin"
+        android:layout_marginRight="@dimen/init_exit_dialog_vip_freedom_star_right_margin"
+        android:layout_marginBottom="@dimen/init_exit_dialog_vip_freedom_margin_w"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ico_star_green"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/init_exit_dialog_vip_freedom_text3"
+        android:textColor="@color/vip_text_hui"
+        android:textSize="@dimen/vip_bottom_textsize"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/init_exit_dialog_vip_freedom_star_left_margin"
+        android:layout_marginRight="@dimen/init_exit_dialog_vip_freedom_star_right_margin"
+        android:layout_marginBottom="@dimen/init_exit_dialog_vip_freedom_margin_w"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ico_star_green"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/init_exit_dialog_vip_freedom_text4"
+        android:textColor="@color/vip_text_hui"
+        android:textSize="@dimen/vip_bottom_textsize"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="@dimen/init_exit_dialog_vip_freedom_star_left_margin"
+        android:layout_marginRight="@dimen/init_exit_dialog_vip_freedom_star_right_margin"
+        android:layout_marginBottom="@dimen/init_exit_dialog_vip_freedom_margin_w"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ico_star_green"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:text="@string/init_exit_dialog_vip_freedom_text5"
+        android:textColor="@color/vip_text_hui"
+        android:textSize="@dimen/vip_bottom_textsize"/>
+
+</LinearLayout>

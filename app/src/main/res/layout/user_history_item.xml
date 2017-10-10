@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/user_movies_all_view_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+    <RelativeLayout
+        android:id="@+id/user_movies_bg_view_frame"
+        android:layout_width="@dimen/user_history_item_w"
+        android:layout_height="@dimen/user_history_item_h"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/user_history_item_bg_magin">
+
+            <!-- 海报 -->
+            <ImageView
+                android:id="@+id/igv_lst_frag_theatre_item_igv_cover"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/movie_init_bkg"
+                android:scaleType="fitXY"/>
+
+            <!-- 底部字幕黑背影-->
+            <ImageView
+                android:id="@+id/user_movies_itemview_shadow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/film_detail_recommend_poster_shadow"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:duplicateParentState="true">
+                <!-- 影片名字 -->
+                <TextView
+                    android:id="@+id/user_movies_view_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="@dimen/history_item_name_tv_mg_b"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/history_item_name_tv_ts"/>
+
+
+                <ImageView
+                    android:id="@+id/user_movies_delete"
+                    android:layout_width="@dimen/user_menber_movies_delete_width"
+                    android:layout_height="@dimen/user_menber_movies_delete_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/history_item_delete_mg_l"
+                    android:layout_marginTop="@dimen/history_item_delete_mg_l"
+                    android:background="@drawable/my_move_del_red"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/theatre_valid_time_allview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:duplicateParentState="true">
+
+                <ImageView
+                    android:id="@+id/theatre_valid_time_bg"
+                    android:layout_width="@dimen/history_item_valid_time_bg_w"
+                    android:layout_height="@dimen/history_item_valid_time_bg_w"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/theatre_valid_time_large_ten"/>
+
+                <!-- 右上角影片有效时间 -->
+                <com.golive.cinema.views.RotateTextViewVip
+                    android:id="@+id/theatre_valid_time_tv"
+                    android:layout_width="@dimen/history_item_valid_time_tv_w"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/history_item_valid_time_tv_mg_r"
+                    android:ellipsize="marquee"
+                    android:gravity="center_horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/history_item_valid_time_tv_pad_l"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_menber_movies_valid_time_testsize"/>
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <!-- 焦点-->
+        <ImageView
+            android:id="@+id/user_movies_item_click_view"
+            android:layout_width="@dimen/user_history_item_w"
+            android:layout_height="@dimen/user_history_item_h"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/sel_user_history_item_bg"
+            android:duplicateParentState="true"
+            android:scaleType="fitXY">
+        </ImageView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/user_message_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/message_title_margin_top"
+        android:text="@string/user_center_tab_message"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/message_title_ts"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/message_list_margin_b"
+        android:layout_marginLeft="@dimen/message_list_margin_l"
+        android:layout_marginRight="@dimen/message_list_margin_r"
+        android:layout_marginTop="@dimen/message_list_margin_t"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/user_message_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@color/translucent"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/message_list_divider"
+            android:fadeScrollbars="false"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:listSelector="@drawable/user_message_listview_selector"
+            android:minHeight="@dimen/message_list_min_h"
+            android:paddingRight="@dimen/message_list_pad_r"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarSize="@dimen/message_list_scrollbarsize"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/user_message_listview_thumb"
+            android:scrollbarTrackVertical="@drawable/user_message_listview_track"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/user_message_no_item_view"
+        layout="@layout/simple_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

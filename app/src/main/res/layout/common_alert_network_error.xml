@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <!--
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_plaint_bg"
+        /> -->
+
+    <TextView
+        android:id="@+id/network_error_alert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_title_top"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_title_size"/>
+
+    <TextView
+        android:id="@+id/network_error_alert_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/network_error_alert_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_text_top"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_text_size"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/network_error_alert_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_btn_top">
+
+        <Button
+            android:id="@+id/network_error_try_btn"
+            style="@style/init_commit_btn_style"
+            android:layout_width="@dimen/alert_dialog_btn_width"
+            android:layout_height="@dimen/alert_dialog_btn_height"
+            android:text="@string/retry_btn_text"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/network_error_alert_btn"
+            style="@style/init_commit_btn_style"
+            android:layout_width="@dimen/alert_dialog_btn_width"
+            android:layout_height="@dimen/alert_dialog_btn_height"
+            android:layout_below="@id/network_error_try_btn"
+            android:layout_marginTop="@dimen/alert_dialog_btn2_top"
+            android:text="@string/exit_btn_text">
+
+            <requestFocus/>
+        </Button>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/service_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/alert_dialog_phone_bottom"
+        android:textColor="@color/init_exit_dialog_phone_color"
+        android:textSize="@dimen/alert_dialog_phone_size"/>
+</RelativeLayout>

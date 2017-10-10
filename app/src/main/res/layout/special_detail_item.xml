@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/special_detail_selector"
+    >
+
+        <ImageView
+            android:id="@+id/imagView_film"
+            android:layout_width="@dimen/special_detail_imageview_width"
+            android:layout_height="@dimen/special_detail_imageview_height"
+            android:scaleType="fitXY"
+            android:contentDescription="@null"
+            android:layout_gravity="center"
+            />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/special_detail_textview_background"
+        android:layout_gravity="bottom"
+        />
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagView_film"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/special_detail_margin_bottom"
+            android:gravity="bottom|center_horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/special_detail_film_name"
+            />
+</FrameLayout>

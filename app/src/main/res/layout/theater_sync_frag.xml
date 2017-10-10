@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.golive.cinema.views.metroviews.widget.TvRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/theater_sync_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/theater_sync_recycler_view_margin_bottom"
+        android:layout_marginTop="@dimen/theater_sync_recycler_view_margin_top"
+        android:orientation="horizontal"
+        android:padding="@dimen/theater_sync_recycler_view_padding"
+        android:scrollbars="none"
+        app:tv_layoutManager="ListLayoutManager"
+        app:tv_selectedItemIsCentered="true" />
+
+    <ImageView
+        android:id="@+id/left_glow"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/theater_sync_recycler_view_padding"
+        android:background="@drawable/glow_left"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/image_border"
+        android:layout_width="@dimen/theater_sync_item_border_width"
+        android:layout_height="@dimen/theater_sync_item_border_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/theater_sync_item_border_margin_top"
+        android:background="@drawable/cinema_trailer_focus"
+        android:scaleType="fitXY"
+        android:visibility="invisible" />
+</RelativeLayout>

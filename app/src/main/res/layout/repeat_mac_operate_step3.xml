@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/phone_mac_login_tv_step3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step3_text_top"
+        android:gravity="center"
+        android:text="@string/phone_number_string_detail22"
+        android:textColor="@color/phonenumber_color_d0d0d0"
+        android:textSize="@dimen/repeat_mac_step3_text_size"/>
+
+    <Button
+        android:id="@+id/phone_mac_login_btn_step3"
+        style="@style/init_commit_btn_style"
+        android:layout_width="@dimen/repeat_mac_step3_btn_w"
+        android:layout_height="@dimen/repeat_mac_step3_btn_h"
+        android:layout_below="@id/phone_mac_login_tv_step3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step3_btn_top"
+        android:text="@string/phone_number_string_detail14"/>
+</RelativeLayout>

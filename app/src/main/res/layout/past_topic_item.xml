@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/special_detail_selector"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+    >
+
+        <ImageView
+            android:id="@+id/imageView_past"
+            android:layout_width="@dimen/past_topic_image_item_width"
+            android:layout_height="@dimen/past_topic_image__item_height"
+            android:scaleType="fitXY"
+            android:src="@color/default_bg"/>
+    </FrameLayout>
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:auto="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <com.golive.cinema.views.AdvertVideoView
+        android:id="@+id/player_advert_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"/>
+
+    <com.golive.cinema.views.CircleLayoutView
+        android:id="@+id/play_advert_media_count_down_view"
+        android:layout_width="@dimen/count_down_layout_width"
+        android:layout_height="@dimen/count_down_layout_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/count_down_layout_margin_right"
+        android:layout_marginTop="@dimen/count_down_layout_margin_top"
+        android:visibility="gone"
+        auto:circle_background_color="@color/count_down_circle_background_color"
+        auto:circle_finished_color="@color/count_down_circle_finished_color"
+        auto:circle_finished_stroke_width="@dimen/count_down_circle_finished_stroke_width"
+        auto:circle_max="@string/count_down_circle_max"
+        auto:circle_per_text="@string/count_down_circle_per_text"
+        auto:circle_per_text_color="@color/count_down_circle_per_text_color"
+        auto:circle_per_text_size="@dimen/count_down_circle_per_text_size"
+        auto:circle_starting_degree="@string/count_down_circle_starting_degree"
+        auto:circle_time_text_color="@color/count_down_circle_time_text_color"
+        auto:circle_time_text_size="@dimen/count_down_circle_time_text_size"
+        auto:circle_unfinished_color="@color/count_down_circle_unfinished_color"
+        auto:circle_unfinished_stroke_width="@dimen/count_down_circle_unfinished_stroke_width"/>
+
+    <include
+        android:id="@+id/advert_media_busying"
+        layout="@layout/player_busying"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/advert_loading_view"-->
+        <!--android:layout_width="@dimen/play_network_speed_min_w"-->
+        <!--android:layout_height="@dimen/play_network_speed_min_w"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@drawable/play_network_speed_bar_circle"-->
+        <!--android:visibility="gone"/>-->
+</RelativeLayout>

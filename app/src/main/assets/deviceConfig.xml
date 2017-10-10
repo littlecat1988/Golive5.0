@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <clienttype>OTHER</clienttype>
+    <deviceid></deviceid>
+    <minScreenWidthInDp>533</minScreenWidthInDp>
+    <!-- 0 not, 1 cibn, 2 icn  -->
+    <license>0</license>
+    <!-- 0 other, 1 TCL, 2 KONKA, 3 CHANGHONG, 4 Domy, 5 TOSHIBA,  6 COOCAA, 7 LETV -->
+    <partner>1</partner>
+    <!-- 0 other; 1-电视；2-OTT；3-手机；4-PAD；-->
+    <devicetype>1</devicetype>
+    <!--1-松下特殊处理 0-默认处理 -->
+    <specialChannelHandle>0</specialChannelHandle>
+</configs>

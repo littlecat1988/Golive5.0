@@ -1,0 +1,300 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+//apply plugin: 'com.antfortune.freeline'
+
+repositories {
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.6.1'
+    }
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.golive.cinema"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode APP_VERSION_CODE as Integer
+        versionName APP_VERSION_NAME
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Enabling multidex support.
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        def path
+        def local_path = 'E:/KEY/golive_release.jks'
+        def server_path = '../Key_GoLive.GoLive'
+        // 由于本地打包使用的是本机上的KeyStore
+        // 而Jenkins打包用的是服务器上的KeyStore
+        // 两个路径不一样
+        path = "true".equals(IS_JENKINS) ? server_path : local_path
+        golive_debug {
+            keyAlias 'golive_ott_key'
+            keyPassword '123456'
+            storeFile file(path)
+            storePassword '123456'
+        }
+        golive_release {
+            keyAlias 'golive_ott_key'
+            keyPassword '123456'
+            storeFile file(path)
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            // Uses new built-in shrinker http://tools.android.com/tech-docs/new-build-system/built-in-shrinker
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+            signingConfig signingConfigs.golive_release
+        }
+
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+            signingConfig signingConfigs.golive_release
+        }
+    }
+
+    // If you need to add more flavors, consider using flavor dimensions.
+    productFlavors {
+        mock {
+            applicationIdSuffix = ".mock"
+        }
+        prod {}
+    }
+
+    // Remove mockRelease as it's not needed.
+    android.variantFilter { variant ->
+        if (variant.buildType.name.equals('release') &&
+                variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true);
+        }
+    }
+
+    // Always show the result of every unit test, even if it passes.
+    testOptions.unitTests.all {
+        testLogging {
+            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    dexOptions {
+//        maxProcessCount 4 // this is the default value
+//        javaMaxHeapSize "2g"
+    }
+
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    // 修改生成的apk名字
+    def timeNow = "true".equals(IS_JENKINS) ? JENKINS_TIME : getDate()
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            if (!"debug".equals(variant.buildType.name)) {
+                def newName = 'GoLive-Android-' + variant.productFlavors[0].name + '-' + variant.buildType.name + '-v' + APP_VERSION_NAME + '-' + timeNow + '.apk'
+                output.outputFile = new File(output.outputFile.parent, newName)
+            }
+        }
+
+        variant.preBuild.doFirst {
+            buildConfigField "boolean", "LOG_FORCE", LOG_FORCE
+            buildConfigField "boolean", "LOG_TO_FILE", LOG_TO_FILE
+            buildConfigField "boolean", "IS_PROD", IS_PROD
+            buildConfigField "boolean", "FILM_CACHE_LOCAL", FILM_CACHE_LOCAL
+            buildConfigField "boolean", "INCLUDE_ADVERT_PROJ", INCLUDE_ADVERT_PROJ
+            buildConfigField "int", "ADVERT_PROJ_VERSION", ADVERT_PROJ_VERSION
+            buildConfigField "String", "MAIN_CONFIG_URL", MAIN_CONFIG_URL
+        }
+
+        // before java compile
+//        variant.javaCompiler.doFirst {
+//            setFiled("APP_MAIN_CONFIG_URL", MAIN_CONFIG_URL)
+//            setFiled("PROD", "release".equals(variant.buildType.name))
+//        }
+
+        // after java compile
+//        variant.javaCompiler.doLast {
+//            setFiled("PROD", DEFAULT_PROD)
+//        }
+    }
+
+//    freeline {
+//        hack true
+//        productFlavor 'mock'
+//    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+        force "com.android.support:design:$rootProject.supportLibraryVersion"
+        force "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+    }
+}
+configurations {
+    all*.exclude group: 'com.android.support', module: 'support-v4'
+}
+
+dependencies {
+
+    compile project(':GoLiveRestApi')
+    compile project(':GoLivePay')
+    compile project(':libraries')
+    compile project(':Logger')
+
+    // include advert project
+    if ("true".equals(INCLUDE_ADVERT_PROJ)) {
+        compile project(':GoLiveAdvertLib')
+    }
+    compile files('libs/GoPlayer.jar')
+    compile files('libs/download.jar')
+    compile files('libs/javatuples-1.2.jar')
+    compile files('libs/VOOLEPLAYAPK_2.0.0_VOOLESDK30_20161104.141329.jar')
+
+    // multidex
+    compile "com.android.support:multidex:$rootProject.ext.multidexVersion"
+
+    // ACRA
+    compile "ch.acra:acra:$rootProject.ext.acraVersion"
+
+    // leakcanary
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$rootProject.ext.leakCanaryVersion"
+    releaseCompile "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.ext.leakCanaryVersion"
+
+    // RxJava
+    compile "io.reactivex:rxjava:$rootProject.ext.rxjavaVersion"
+    // RxAndroid
+    compile "io.reactivex:rxandroid:$rootProject.ext.rxandroidVersion"
+    // RxBus
+    compile "com.hwangjr.rxbus:rxbus:$rootProject.ext.rxbus"
+    compile "com.squareup.sqlbrite:sqlbrite:$rootProject.ext.sqlbrite"
+    // Retrofit
+    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    // Retrofit XML converter (Simple)
+    compile("com.squareup.retrofit2:converter-simplexml:$rootProject.ext.retrofitVersion") {
+        exclude group: 'stax', module: 'stax-api' //important
+        exclude group: 'stax', module: 'stax' //important
+        exclude group: 'xpp3', module: 'xpp3' //important
+    }
+    // Simple xml
+    compile("org.simpleframework:simple-xml:$rootProject.ext.simpleXmlVersion") {
+        exclude group: 'stax', module: 'stax-api' //important
+        exclude group: 'stax', module: 'stax' //important
+        exclude group: 'xpp3', module: 'xpp3' //important
+    }
+    // Retrofit RxJava adapter
+    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.retrofitVersion"
+    // Retrofit log interceptor
+    compile("com.squareup.okhttp3:logging-interceptor:$rootProject.ext.okhttpVersion")
+
+    // glide
+    compile "com.github.bumptech.glide:glide:$rootProject.glide"
+
+    // Palette
+    compile "com.android.support:palette-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-fragment:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-core-ui:$rootProject.supportLibraryVersion"
+//    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+//    compile "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintLayoutVersion"
+    compile "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+
+//    compile "com.google.guava:guava:$rootProject.guavaVersion"
+    compile "com.google.code.gson:gson:$rootProject.gsonVersion"
+
+    // http client
+    compile "org.apache.httpcomponents:httpclient-android:$rootProject.httpclientAndroidVersion"
+
+    // Stetho
+    debugCompile "com.facebook.stetho:stetho:$rootProject.stethoVersion"
+    debugCompile "com.facebook.stetho:stetho-okhttp3:$rootProject.stethoVersion"
+
+    // Dependencies for local unit tests
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    testCompile "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testCompile "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
+    // leakcanary
+    testCompile "com.squareup.leakcanary:leakcanary-android-no-op:$rootProject.ext.leakCanaryVersion"
+
+    // Android Testing Support Library's runner and rules
+    androidTestCompile "com.android.support.test:runner:$rootProject.ext.androidTestVersion"
+    androidTestCompile "com.android.support.test:rules:$rootProject.ext.androidTestVersion"
+    // Dependencies for Android unit tests
+    androidTestCompile "junit:junit:$rootProject.ext.junitVersion"
+    androidTestCompile "org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
+    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+    // Espresso UI Testing
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion",
+            {
+                exclude group: 'com.android.support', module: 'support-annotations'
+            })
+    androidTestCompile("com.android.support.test.espresso:espresso-contrib:$rootProject.espressoVersion")
+    androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    // Espresso-web for WebView support
+    androidTestCompile "com.android.support.test.espresso:espresso-web:$rootProject.espressoVersion"
+    // Resolve conflicts between main and test APK:
+    androidTestCompile "com.android.support:support-annotations:$rootProject.supportLibraryVersion"
+//    androidTestCompile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
+    androidTestCompile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+}
+
+def setFiled(String filedName, Object value) {
+    println "setFiled, filedName : " + filedName + ", value : " + value
+    def path = "app/src/main/java/com/golive/cinema/Constants.java"
+    File file = new File(path)
+    String text = file.getText('UTF-8')
+    // match Annotations (style "//...\n", exclude"://")
+    String regexAnnotations1 = "(?<!:)//.*";
+    // match Annotations (style "/*...*/")
+    String regexAnnotations2 = "/\\*[\\s\\S]*?\\*/";
+    // remove all Annotations
+    text = text.replaceAll(regexAnnotations1 + "|" + regexAnnotations2, "");
+    // replace key-value
+    text = text.replaceAll("\\s+" + key + "\\s*=[\\s\\S]*?;", str = " " + key + " = " + value + ";");
+    file.write(text, 'UTF-8')
+}

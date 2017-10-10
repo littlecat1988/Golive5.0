@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_plaint_bg"/>
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_dlg_title_margin_top"
+        android:gravity="center"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/common_dlg_title_font_size"/>
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_dlg_content_margin_top"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/common_dlg_content_font_size"/>
+
+    <Button
+        android:id="@+id/ok_btn"
+        android:layout_width="@dimen/common_dlg_btn_width"
+        android:layout_height="@dimen/common_dlg_btn_height"
+        android:layout_below="@id/content_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_dlg_btn_margin_top"
+        android:background="@drawable/selector_confirm_purchase_btn_bg"
+        android:text="@string/ok"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/common_dlg_btn_font_size">
+
+        <requestFocus/>
+    </Button>
+</RelativeLayout>

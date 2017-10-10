@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/theater_sync_item_width"
+    android:layout_height="match_parent"
+    android:background="@drawable/poster_item_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/movie_init_bkg">
+
+        <!--海报-->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/poster_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/theater_sync_item_prompt_margin_top"
+            android:layout_marginTop="@dimen/theater_sync_item_prompt_margin_top"
+            android:background="@drawable/poster_bg_prompt"
+            android:paddingLeft="@dimen/theater_sync_item_prompt_margin_top"
+            android:paddingRight="@dimen/theater_sync_item_prompt_margin_top"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/theater_sync_item_prompt_text_size"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/script_image"
+            android:layout_width="@dimen/theater_sync_item_subscript_width"
+            android:layout_height="@dimen/theater_sync_item_subscript_width"
+            android:layout_gravity="right"
+            android:scaleType="fitXY" />
+
+        <com.golive.cinema.views.RotateTextView
+            android:id="@+id/script_text"
+            android:layout_width="@dimen/theater_sync_item_subscript_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/theater_sync_item_subscript_text_margin"
+            android:layout_marginTop="@dimen/theater_sync_item_subscript_text_margin"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/theater_sync_item_text_size" />
+
+        <View
+            android:id="@+id/theater_poster_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/film_detail_recommend_poster_shadow"
+            android:visibility="invisible" />
+
+        <!--位置索引-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/theater_sync_item_text_margin_Bottom"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/theater_sync_item_text_size" />
+    </FrameLayout>
+</FrameLayout>

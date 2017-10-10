@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/user_pay_qrcode_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vip_qrcode_title_mg_t"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/vip_qrcode_title_ts"
+        android:textColor="@color/color_ee"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/vip_qrcode_bg_mg_t"
+            android:layout_marginLeft="@dimen/vip_qrcode_bg_mg_lr"
+            android:layout_marginRight="@dimen/vip_qrcode_bg_mg_lr"
+            android:layout_marginBottom="@dimen/vip_qrcode_bg_mg_b"
+            android:background="@color/qr_code_pay_bg"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:id="@+id/user_topup_qrcode_view_inclut"
+                    android:layout_marginTop="@dimen/vip_qrcode_image_mg_t"
+                    android:layout_marginLeft="@dimen/vip_qrcode_image_mg_l"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_width="@dimen/user_topup_qrcode_h"
+                    android:layout_height="@dimen/user_topup_qrcode_h"
+                    android:layout_gravity="center"
+                />
+                <LinearLayout
+                    android:id="@+id/user_topup_qrcode_bottom_text"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/vip_qrcode_bottom_text_h"
+                    android:layout_marginTop="@dimen/vip_qrcode_bottom_text_mg_t"
+                    android:layout_marginLeft="@dimen/vip_qrcode_bottom_text_mg_l"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/user_topup_qrcode_view_inclut">
+                    <TextView
+                        android:id="@+id/user_topup_qrcode_tv_please"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qrcode_pay_qrtxt_1"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/topup_qrcode_bottom_image_ts"
+                        android:textColor="@color/color_ee"/>
+                    <ImageView
+                        android:id="@+id/user_topup_qrcode_image_wechat"
+                        android:layout_width="@dimen/topup_qrcode_bottom_image_wh"
+                        android:layout_height="@dimen/topup_qrcode_bottom_image_wh"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/wechat_small"/>
+                    <TextView
+                        android:id="@+id/user_topup_qrcode_tv_and"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qrcode_pay_qrtxt_2"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/topup_qrcode_bottom_image_ts"
+                        android:textColor="@color/color_ee"/>
+                    <ImageView
+                        android:id="@+id/user_topup_qrcode_image_alipay"
+                        android:layout_width="@dimen/topup_qrcode_bottom_image_wh"
+                        android:layout_height="@dimen/topup_qrcode_bottom_image_wh"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/alipay_small"/>
+                    <TextView
+                        android:id="@+id/user_topup_qrcode_tv_scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qrcode_pay_qrtxt_3"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/topup_qrcode_bottom_image_ts"
+                        android:textColor="@color/color_ee"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/vip_qrcode_right_text_mg_l"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vip_qrcode_right_text_mg_t"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/user_pay_qrcode_price_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vip_pay_dlg_goods_name"
+                        android:textSize="@dimen/topup_qrcode_account_ts"
+                        android:textColor="@color/color_ee"
+                        android:gravity="left"/>
+                    <TextView
+                        android:id="@+id/user_pay_qrcode_price"
+                        android:layout_width="@dimen/vip_qrcode_right_price_w"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_zero_money"
+                        android:textSize="@dimen/topup_qrcode_account_ts"
+                        android:textColor="@color/color_ee"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/vip_qrcode_right_text_bw_mg_t"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/user_pay_qrcode_scanprice_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vip_pay_scan_pay"
+                        android:textSize="@dimen/topup_qrcode_account_ts"
+                        android:textColor="@color/color_ee"
+                        android:gravity="left"/>
+                    <TextView
+                        android:id="@+id/user_pay_qrcode_scanprice"
+                        android:layout_width="@dimen/vip_qrcode_right_price_w"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_zero_money"
+                        android:textSize="@dimen/topup_qrcode_account_ts"
+                        android:textColor="@color/user_coin_color"
+                        android:gravity="right"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/vip_qrcode_right_text_bottom_mg_b"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/topup_pay_qrcode_right_tips_work"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/topup_qrcode_pay_quik_finish"
+                            android:textSize="@dimen/vip_qrcode_right_quik_t1_ts"
+                            android:textColor="@color/color_ee"
+                            android:gravity="left"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/vip_qrcode_right_text_bottom_bw"
+                            android:text="@string/qrcode_pay_sent_sign"
+                            android:textSize="@dimen/vip_qrcode_right_quik_t2_ts"
+                            android:textColor="@color/pay_qrcode_hui"
+                            android:gravity="left"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/topup_credit_buttom_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/vip_qrcode_bottom_t_mg_b"
+            android:text="@string/user_credit_bottom_tips"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.52"
+            android:textSize="@dimen/vip_qrcode_bottom_t_ts"
+            android:textColor="@color/vip_text_hui"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

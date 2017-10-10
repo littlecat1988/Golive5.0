@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/confirm_purchase_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/purchase_title"/>
+
+        <LinearLayout
+            android:id="@+id/content_vg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/confirm_purchase_content_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_tag_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/purchase_price"/>
+                <TextView
+                    android:id="@+id/pay_tag_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_content_line_space"
+                    android:text="@string/purchase_normal_pay"/>
+                <TextView
+                    android:id="@+id/credit_pay_tag_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_content_line_space"
+                    android:text="@string/purchase_credit_pay"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/need_pay_tag_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_need_pay_line_space"
+                    android:text="@string/purchase_need_more_pay"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/confirm_purchase_content_margin_left"
+                android:gravity="right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/pay_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_content_line_space"/>
+                <TextView
+                    android:id="@+id/credit_pay_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_content_line_space"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/need_pay_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_need_pay_line_space"
+                    android:textColor="@color/user_coin_color"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_vg"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/purchase_btn"
+                style="@style/confirm_purchase_btn"
+                android:layout_width="@dimen/confirm_purchase_confirm_purchase_width"
+                android:layout_height="@dimen/confirm_purchase_confirm_purchase_height"
+                android:layout_marginTop="@dimen/confirm_purchase_confirm_purchase_margin_top"
+                android:text="@string/purchase_confirm_and_play"/>
+
+            <Button
+                android:id="@+id/top_up_btn"
+                style="@style/confirm_purchase_btn"
+                android:layout_width="@dimen/confirm_purchase_confirm_purchase_width"
+                android:layout_height="@dimen/confirm_purchase_confirm_purchase_height"
+                android:layout_marginTop="@dimen/confirm_purchase_top_up_margin_top"
+                android:text="@string/purchase_top_up"/>
+
+            <LinearLayout
+                android:id="@+id/refund_credit_vg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/credit_balance_tv"
+                    style="@style/confirm_purchase_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/confirm_purchase_need_pay_line_space"
+                    android:text="@string/purchase_credit_balance"
+                    android:visibility="gone"/>
+                <Button
+                    android:id="@+id/refund_credit_btn"
+                    style="@style/confirm_purchase_btn"
+                    android:layout_width="@dimen/confirm_purchase_confirm_purchase_width"
+                    android:layout_height="@dimen/confirm_purchase_confirm_purchase_height"
+                    android:layout_marginTop="@dimen/confirm_purchase_top_up_margin_top"
+                    android:text="@string/purchase_refund"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/purchase_help_tv"
+        style="@style/confirm_purchase_txt_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/credit_expire_introduce_margin_bottom"
+        android:text="@string/purchase_help_info"/>
+
+    <ImageView
+        android:id="@+id/purchase_igv"
+        android:layout_width="@dimen/notice_img_size"
+        android:layout_height="@dimen/notice_img_size"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/notice_img_margin_right"
+        android:layout_marginTop="@dimen/notice_img_margin_top"/>
+</RelativeLayout>

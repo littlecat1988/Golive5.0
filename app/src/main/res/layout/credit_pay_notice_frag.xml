@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.golive.cinema.views.LetterSpacingTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/credit_pay_notice_title"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/credit_pay_notice_title_text_size"
+        app:letter_spacing="0.3"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/credit_pay_notice_description_margin_top">
+
+        <com.golive.cinema.views.LetterSpacingTextView
+            android:id="@+id/credit_pay_notice_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credit_pay_notice_description"
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/credit_pay_notice_content_text_size"
+            app:letter_spacing="0.3"/>
+
+        <LinearLayout
+            android:id="@+id/credit_pay_notice_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/credit_pay_notice_description"
+            android:layout_marginTop="@dimen/credit_pay_notice_detail_margin_top"
+            android:orientation="horizontal">
+            <com.golive.cinema.views.LetterSpacingTextView
+                android:id="@+id/credit_pay_limit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/credit_pay_notice_content_text_size"
+                app:letter_spacing="0.2"/>
+            <com.golive.cinema.views.LetterSpacingTextView
+                android:id="@+id/credit_pay_days_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/credit_pay_notice_detail_margin_left"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/credit_pay_notice_content_text_size"
+                app:letter_spacing="0.2"/>
+            <com.golive.cinema.views.LetterSpacingTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_pay_notice_refund_alert"
+                android:textColor="@color/credit_pay_notice_refund_alert"
+                android:textSize="@dimen/credit_pay_notice_refund_text_size"
+                app:letter_spacing="0.2"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/credit_pay_btn"
+        android:layout_width="@dimen/credit_pay_notice_btn_width"
+        android:layout_height="@dimen/credit_pay_notice_btn_height"
+        android:layout_marginTop="@dimen/credit_pay_notice_btn_margin_top"
+        android:background="@drawable/dialog_button_selector"
+        android:text="@string/ok"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/credit_pay_notice_btn_text_size"/>
+</LinearLayout>

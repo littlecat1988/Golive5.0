@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/phone_mac_login_tv_step2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step2_tip1_top"
+        android:gravity="center"
+        android:textColor="@color/phonenumber_color_d0d0d0"
+        android:textSize="@dimen/repeat_mac_step1_tip1_size"/>
+
+    <EditText
+        android:id="@+id/phone_mac_login_bt_edit_text_step2"
+        android:layout_width="@dimen/repeat_mac_step1_etext_w"
+        android:layout_height="@dimen/repeat_mac_step1_etext_h"
+        android:layout_below="@id/phone_mac_login_tv_step2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step2_etext_top"
+        android:background="@drawable/dialog_edit_text_selector"
+        android:digits="0123456789"
+        android:gravity="left|center_vertical"
+        android:hint="@string/e_400025"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/repeat_mac_step1_etext_left"
+        android:paddingRight="@dimen/repeat_mac_step1_etext_left"
+        android:selectAllOnFocus="true"
+        android:textColor="@color/count_down_circle_per_text_color"
+        android:textColorHint="@color/common_edittext_hint_color"
+        android:textSize="@dimen/repeat_mac_step1_etext_size"/>
+
+    <Button
+        android:id="@+id/phone_mac_login_check_code_btn"
+        style="@style/init_commit_btn_style"
+        android:layout_width="@dimen/repeat_mac_step2_btn_w"
+        android:layout_height="@dimen/repeat_mac_step2_btn_h"
+        android:layout_alignTop="@id/phone_mac_login_bt_edit_text_step2"
+        android:layout_marginLeft="@dimen/repeat_mac_step2_btn_left"
+        android:layout_marginTop="@dimen/repeat_mac_step2_btn_top"
+        android:layout_toRightOf="@id/phone_mac_login_bt_edit_text_step2"
+        android:text="@string/phone_number_string_detail9"
+        android:textSize="@dimen/repeat_mac_step2_btn_size">
+
+        <requestFocus/>
+    </Button>
+
+    <TextView
+        android:id="@+id/phone_mac_login_check_code_error_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone_mac_login_check_code_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step2_err_top"
+        android:lineSpacingExtra="@dimen/phonenumber_login_view_golive_lineSpacing"
+        android:text="@string/phone_number_string_detail18"
+        android:textColor="@color/phone_mac_login_check_code_error_color"
+        android:textSize="@dimen/repeat_mac_step2_err_size"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/phone_mac_login_check_commit_btn"
+        style="@style/init_commit_btn_style"
+        android:layout_width="@dimen/repeat_mac_step1_btn_w"
+        android:layout_height="@dimen/repeat_mac_step1_btn_h"
+        android:layout_below="@id/phone_mac_login_check_code_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step2_btn2_top"
+        android:text="@string/phone_number_string_detail19"/>
+
+    <Button
+        android:id="@+id/phone_mac_login_last_step_btn"
+        style="@style/init_commit_btn_style"
+        android:layout_width="@dimen/repeat_mac_step1_btn_w"
+        android:layout_height="@dimen/repeat_mac_step1_btn_h"
+        android:layout_below="@id/phone_mac_login_check_commit_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_mac_step2_btn3_top"
+        android:text="@string/phone_number_string_detail10"/>
+
+</RelativeLayout>

@@ -1,0 +1,836 @@
+<resources>
+    <string name="app_name">同步院线</string>
+
+    <!--common-->
+    <string name="ok">确定</string>
+    <string name="ok_counting">确定 %1$ds</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="please_wait">请稍候...</string>
+    <string name="loading">加载中...</string>
+    <string name="loading_failed">获取信息失败！</string>
+    <string name="loading_error">影片还在奋力加载中...</string>
+    <string name="refresh">Refresh</string>
+    <string name="N_A">N/A</string>
+    <string name="online">在线</string>
+    <string name="download">download</string>
+    <string name="trailer">trailer</string>
+    <string name="local">本地</string>
+    <string name="play">观看</string>
+    <string name="purchase">purchase</string>
+    <string name="purchase_to_play">购票观看</string>
+    <string name="purchase_to_download">购票下载</string>
+    <string name="price">票价</string>
+    <string name="original_price">原价</string>
+    <string name="online_price">在线票价</string>
+    <string name="download_price">下载票价</string>
+    <string name="balance">balance</string>
+    <string name="topUp">Top up</string>
+    <string name="vip">会员</string>
+    <string name="free">免费</string>
+    <string name="credit_pay">先看后付</string>
+    <string name="price_RMB">%1$.2f元</string>
+    <string name="RMB">元</string>
+    <string name="minute">分钟</string>
+    <string name="need_write_permission">请授权文件读写权限!</string>
+    <string name="crash_toast_text">系统异常, 正在修复</string>
+    <string name="no_installer">系统没有内置安装器应用</string>
+    <string name="change_server">切换服务器环境</string>
+    <string name="i_know">我知道了</string>
+
+    <!--navi-->
+    <string name="nav_all">All</string>
+    <string name="nav_now">Now</string>
+
+    <!-- init -->
+    <string name="init_failed">初始化失败</string>
+
+    <!--login-->
+    <string name="login">Login</string>
+    <string name="login_please_wait">正在登录, 请稍候...</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败!</string>
+    <string name="no_phone">请输入手机号!</string>
+    <string name="get_verify_code_failed">获取验证码失败!</string>
+    <string name="verify_phone_failed">验证手机号失败!</string>
+
+    <!-- 推荐页 -->
+    <string name="recommend_get_failed">推荐页 : %1$s</string>
+
+    <!-- 专题 -->
+    <string name="topic_old">往期专题</string>
+    <string name="topic_detail_get_failed">获取专题详情失败</string>
+    <string name="topic_list_get_failed">获取专题列表失败</string>
+
+    <!-- film -->
+    <string name="films_load_failed">加载影片列表失败!</string>
+
+    <!-- film detail -->
+    <string name="film_detail_loading_please_wait">正在加载影片信息, 请稍候...</string>
+    <string name="film_detail_updating_view_please_wait">正在更新信息, 请稍候...</string>
+    <string name="film_detail_load_failed">加载影片信息失败</string>
+    <string name="film_detail_update_view_failed">刷新影片信息失败</string>
+    <string name="film_detail_missing_film">没有该影片!</string>
+    <string name="film_detail_corner_vip_free">会员免费</string>
+    <string name="film_detail_corner_vip_charge">会员收费</string>
+    <string name="film_detail_open_vip_for_free">开通会员免费看</string>
+    <string name="film_detail_open_vip_for_discount">开通会员优惠看</string>
+    <string name="film_detail_open_vip">开通会员尊享看</string>
+    <string name="film_detail_credit_pay">先看后付</string>
+    <string name="film_detail_trailer">预告片</string>
+    <string name="film_detail_more">详情</string>
+    <string name="film_detail_no_description">该影片无详情介绍</string>
+    <string name="film_detail_sweep_code_pay">扫码支付立即观看</string>
+    <string name="film_detail_recommended_for_you">为您推荐</string>
+    <string name="film_detail_director">导演：</string>
+    <string name="film_detail_actors">演员：</string>
+    <string name="film_detail_watch_time">观影期：</string>
+    <string name="film_detail_watch_time_month2day">%1$d.%2$d</string>
+    <string name="film_detail_watch_time_year2month2day">%1$d.%2$d.%3$d</string>
+    <string name="film_detail_price">票价：</string>
+    <string name="film_detail_vip">会员：</string>
+    <string name="film_detail_free">免费</string>
+    <string name="film_detail_toast_no_trailer">囧，找不到预告片...</string>
+    <string name="film_detail_checking_play_validity">正在检查播放状态, 请稍候...</string>
+    <string name="film_detail_purchase_success">购买影片成功</string>
+    <string name="film_detail_purchase_failed">购买影片失败</string>
+    <string name="film_detail_download_start">开始下载</string>
+    <string name="film_detail_download_resume">继续下载</string>
+    <string name="film_detail_download_pause">暂停下载</string>
+    <string name="film_detail_download_pending">正在等待下载</string>
+    <string name="film_detail_download_error_to_purchase">再进行购票</string>
+    <string name="film_detail_download_error_re_download">重新创建下载任务</string>
+    <string name="film_detail_download_error_no_storage">U盘不存在！</string>
+    <string name="film_detail_download_error_no_storage_content">请插入可用空间大于%1$s的U盘后</string>
+    <string name="film_detail_download_error_space_not_enough">U盘空间不足！</string>
+    <string name="film_detail_download_error_space_not_enough_content">
+        请确认您的U盘可用空间大于%1$s后
+    </string>
+    <string name="film_detail_recommended_player_title">大家都在看</string>
+
+    <!-- film watch notice -->
+    <string name="film_watch_notice_title_shoufa">首发影院观影须知</string>
+    <string name="film_watch_notice_title_tongbu">同步院线观影须知</string>
+    <string name="film_watch_notice_content_shoufa"><![CDATA[
+        根据影片发行方要求，观看首发影片有如下规则：<br/>
+        1）本次购票观影时限为%1$d小时，但不限观影次数；
+        ]]>
+    </string>
+    <string name="film_watch_notice_content_tongbu"><![CDATA[
+        根据影片发行方要求，观看同步影片有如下规则：<br/>
+        1）同步院线与电影影院观影体验一致，仅支持<font color="#58C3E0">单次</font>观看，<font color="#58C3E0">不支持</font>快进快退，<br/>
+           同时请确保网络带宽大于<font color="#58C3E0">8M</font>；<br/>
+        2）本次购买的影片，仅可在<font color="#58C3E0">当前账户、当前终端</font>观看；<br/>
+        3) 为<font color="#58C3E0">保障影片版权</font>，在影片播放过程中会不定时出现你的账户信息，敬请谅解；<br/>
+        4) 支持在线和下载观影方式（一次购票不支持方式切换）；下载观影需要<br/>
+           充足空间的品牌U盘存储片文件，完成下载后即可播放；
+        ]]>
+    </string>
+    <string name="film_watch_notice_hide">下次再提示我</string>
+    <string name="film_watch_notice_hide_always">同意并关闭提示功能</string>
+
+    <!-- credit pay notice -->
+    <string name="credit_pay_notice_title">欢迎使用先看后付功能</string>
+    <string name="credit_pay_notice_description">余额不足？没关系，你可以“先观影后付费”先睹为快。</string>
+    <string name="credit_pay_notice_limit">先看后付额度:%1$s</string>
+    <string name="credit_pay_notice_dead_line_days">账期:%1$d天</string>
+    <string name="credit_pay_notice_dead_line_forever">账期:无限期</string>
+    <string name="credit_pay_notice_refund_alert">（到账期须归还欠款，否则购买权限将受限）</string>
+
+    <string name="play_film_detail_recommend_tips">退出《%1$s》播放？</string>
+    <string name="play_film_detail_recommend_commit_text">继续播放</string>
+    <string name="play_film_detail_recommend_cancel_text">退&#160;出</string>
+
+    <!-- play failed-->
+    <string name="play_failed">播放失败</string>
+    <string name="play_error_code">错误代码</string>
+    <string name="play_error_desc">错误描述</string>
+    <string name="play_error_unknown">未知错误</string>
+    <string name="play_error_type_not_support">不支持该媒体资源</string>
+    <string name="play_error_no_order">订单过期,请重新购买</string>
+    <string name="play_error_ticket_overdue">电影票过期,请重新购买</string>
+    <string name="play_error_mediainfo_not_found">无法获取该媒体资源信息</string>
+    <string name="play_error_download_not_task">未找到下载记录</string>
+    <string name="play_error_download_not_finish">下载未完成</string>
+    <string name="play_error_local_file_missing">无法找到本地视频文件</string>
+    <string name="play_error_local_file_missing_content">请插入存储视频文件的U盘，或重新下载后再播放</string>
+    <string name="play_error_media_error">无法连接到媒体资源</string>
+    <string name="play_error_network_error">网络异常</string>
+    <string name="play_error_connect_timeout">播放器连接超时</string>
+    <string name="play_error_format_not_support">播放器暂不支持该格式</string>
+
+    <!-- play overdue -->
+    <string name="play_overdue_title">《%1$s》电影票过期</string>
+    <string name="play_overdue_content">请重新购买</string>
+
+    <!-- player -->
+    <string name="player_upgrading">正在更新播放器</string>
+    <string name="player_upgrade_success">更新播放器成功</string>
+    <string name="player_upgrade_failed">更新播放器失败</string>
+
+    <!-- download -->
+    <string name="download_finish">下载完成</string>
+    <string name="download_already_progress">已下载%1$s</string>
+    <string name="download_confirm_restore_backup_download">发现历史下载记录，是否恢复历史下载?</string>
+    <string name="download_sel_path_to_restore_backup_download">请选择一个恢复下载的目录</string>
+    <string name="download_sel_media_title">下载任务创建</string>
+    <string name="download_sel_media_choose_media">选择资源</string>
+    <string name="download_sel_media_choose_storage">选择存储器</string>
+    <string name="download_sel_media_time_estimated">预计下载时长%1$s</string>
+    <string name="download_sel_media_recommend">少侠！这种观影方式够清晰！</string>
+    <string name="download_sel_media_storage_available_capacity"><![CDATA[可用空间<br/>%1$s]]></string>
+    <string name="download_sel_media_storage_capacity_not_enough">空间不足</string>
+    <string name="download_sel_media_storage_num">U盘%1$s</string>
+    <string name="download_sel_media_storage_auto_select">%1$d秒后自动选择</string>
+    <string name="download_restore_storage_already_progress"><![CDATA[已下载<br/>%1$s]]></string>
+    <string name="download_restore_storage_title">发现下载记录，恢复下载记录?</string>
+    <string name="download_restore_storage_restore">恢复下载</string>
+    <string name="download_restore_storage_redownload">重新下载</string>
+    <string name="download_select_restore_storage_title">下载记录选择</string>
+
+    <!-- download error-->
+    <string name="download_error_title">《%1$s》下载失败</string>
+    <string name="download_error_description">错误描述:%1$s</string>
+    <string name="download_error">下载失败</string>
+    <string name="download_error_no_storage_device">没有存储设备</string>
+    <string name="download_error_io_file_not_exist">无法找到文件或者存储设备</string>
+    <string name="download_error_io_storage_device_not_exist">无法找到存储设备</string>
+    <string name="download_error_io_file_read_failed">读取文件失败</string>
+    <string name="download_error_io_file_write_failed">写入文件失败</string>
+    <string name="download_error_io_file_create_failed">创建文件失败。</string>
+    <string name="download_error_io_space_not_enouth">存储设备剩余空间不足</string>
+    <string name="download_error_connection_closed">与服务器的连接断开</string>
+    <string name="download_error_get_file_info_failed">无法获取下载文件信息，请稍后重试</string>
+    <string name="download_error_io_network_not_available">网络连接异常</string>
+    <string name="download_error_io_network_error">网络异常</string>
+    <string name="download_error_io_socket_time_out">网络连接超时</string>
+    <string name="download_error_io_url_invalid">非法下载路径</string>
+    <string name="download_error_io_server_error">服务器异常</string>
+    <string name="download_error_io_server_not_reach">无法连接到服务器</string>
+    <string name="download_error_io_server_unavailable">服务器暂时不可用,请稍后重试</string>
+    <string name="download_error_io_file_error">文件错误</string>
+    <string name="download_error_io_file_too_large">文件大小超过文件系统最大限制</string>
+    <string name="download_error_io_IO_error">请检查网络或插入U盘后重试</string>
+    <string name="download_error_io_md5_error">源文件数据错误</string>
+    <string name="download_error_task_not_exist">下载任务不存在</string>
+    <string name="download_error_task_exist_already">下载任务已经存在</string>
+    <string name="download_error_task_downloading_already">下载任务正在下载中</string>
+    <string name="download_error_task_pausing_already">下载任务正在暂停中</string>
+    <string name="download_error_task_has_pause">下载任务已经暂停</string>
+    <string name="download_error_task_deleting_already">下载任务正在删除中</string>
+    <string name="download_error_task_has_delete">下载任务已经删除</string>
+    <string name="download_error_task_complete_already">下载任务已经完成</string>
+    <string name="download_error_max_task_reach">已经达到最大下载数量限制</string>
+    <string name="download_error_task_waiting_last_action">等待上一次操作完成</string>
+    <string name="download_error_unknown">未知错误</string>
+    <string name="download_error_fatal_error">严重错误。请重新下载</string>
+    <string name="download_error_file_need_format">文件可能已经损坏, 建议格式化U盘或使用电脑进行磁盘修复后重新下载.</string>
+
+    <!-- purchase -->
+    <string name="purchase_loading_please_wait">正在加载, 请稍候...</string>
+    <string name="purchase_loading_failed">获取支付信息失败！</string>
+    <string name="purchase_purchasing_please_wait">正在准备购买, 请稍候...</string>
+    <string name="purchase_refunding_please_wait">正在准备还款, 请稍候...</string>
+    <string name="purchase_success">购买成功</string>
+    <string name="purchase_failed">购买失败!</string>
+    <string name="purchase_refund_success">您已成功还款，谢谢！</string>
+    <string name="purchase_refund_failed">还款失败</string>
+    <string name="purchase_title">请为《%1$s》支付%2$.2f元票款</string>
+    <string name="purchase_title_vip">购买%1$s</string>
+    <string name="purchase_title_vip_monthly">购买%1$s</string>
+    <string name="purchase_price">票价总额 :&#160;</string>
+    <string name="purchase_normal_pay">账户余额支付 :&#160;</string>
+    <string name="purchase_credit_pay">先看后付 :&#160;</string>
+    <string name="purchase_credit_balance">先看后付可用 : %1$.2f元</string>
+    <string name="purchase_need_more_pay">还需支付 :&#160;</string>
+    <string name="purchase_confirm">确认支付</string>
+    <string name="purchase_confirm_and_play">确认支付，立即播放</string>
+    <string name="purchase_top_up">立即充值</string>
+    <string name="purchase_refund">立即还款</string>
+    <string name="purchase_help_info">客服电话:4001876867（9-21点） QQ:2970898808</string>
+    <string name="purchase_help_credit_pay">先看后付：先观影后付款，操作简单更便捷（%1$d天内还款即可）；最终解释权归同步院线所有。</string>
+    <string name="purchase_help_credit_pay_not_deadline">先看后付：先观影后付款，操作简单更便捷；最终解释权归同步院线所有。</string>
+
+    <!-- credit pay -->
+    <string name="credit_expire_title">先看后付账单到期</string>
+    <string name="credit_expire_content"><![CDATA[
+        您的先看后付账单已到期(账期%1$s天)。为不影响您正常使用，请尽快还款。<br/>
+        账单金额 : %2$.2f元 ( 额度 %3$.2f元 )
+        ]]>
+    </string>
+    <string name="credit_pay_refund">先看后付还款</string>
+    <string name="credit_expire_refund">立即还款</string>
+    <string name="credit_expire_notice_later">稍后提醒我</string>
+    <string name="credit_introduce">先看后付介绍 : 先观影消费，后支付结算，易用便捷；最终解释权归同步院线所有。</string>
+
+    <!-- qr code pay -->
+    <string name="qrcode_pay_normal">请使用微信/支付宝扫码支付%1$.2f元</string>
+    <string name="qrcode_pay_refund">请为先看后付&#160;扫码支付%1$.2f元</string>
+    <string name="qrcode_pay_title_vip">开通%1$s扫码支付%2$.2f元</string>
+    <string name="qrcode_pay_price">票&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;价&#160;:
+    </string>
+    <string name="qrcode_pay_normal_vip_monthly">开通连续包月&#160;&#160;扫码授权支付%1$.2f元</string>
+    <string name="qrcode_pay_price_vip_monthly">商品总额&#160;:</string>
+    <string name="qrcode_pay_vip_monthly_known">了解连续包月</string>
+    <string name="qrcode_pay_pay_service_known">了解收费服务协议</string>
+    <string name="qrcode_pay_scan_pay">扫码支付&#160;:</string>
+    <string name="qrcode_pay_price_refund">还款总额&#160;:</string>
+    <string name="qrcode_pay_wallet_pay">余额支付&#160;:</string>
+    <string name="qrcode_pay_credit_wallet_pay">先看后付&#160;:</string>
+    <string name="qrcode_pay_need_pay">还需支付&#160;:</string>
+    <string name="qrcode_pay_to_play_film">付款成功后，影片立即观看</string>
+    <string name="qrcode_pay_to_refund_credit">付款成功后，额度立即生效</string>
+    <string name="qrcode_pay_to_register_vip">付款成功后，会员立即生效</string>
+    <string name="qrcode_pay_notice">付款成功后会收到微信/支付宝的支付凭证</string>
+    <string name="qrcode_pay_notice_vip_monthly">您的手机APP将会收到微信或支付宝的支付凭证</string>
+    <string name="qrcode_pay_agree_vip_monthly">我同意连续包月自动扣费规则</string>
+    <string name="qrcode_pay_success">扫码支付成功！</string>
+    <string name="qrcode_pay_failed">扫码支付失败，请稍后重试</string>
+    <string name="qrcode_pay_qrtxt_1">使用</string>
+    <string name="qrcode_pay_qrtxt_2">或</string>
+    <string name="qrcode_pay_qrtxt_3">扫描上面的二维码</string>
+
+    <!-- order -->
+    <string name="order_purchasing_film_please_wait">正在准备购买影片, 请稍候...</string>
+
+    <!--player-->
+    <string name="play_advert_loading_error_text">广告播放连接超时</string>
+    <string name="play_pre_loading_restart_text">按&#160;[&#160;左&#160;]&#160;键重新播放</string>
+    <string name="theatre_play_clarity_high_text">高&#160;清</string>
+    <string name="theatre_play_clarity_standard_text">标&#160;清</string>
+    <string name="theatre_play_clarity_super_text">超&#160;清</string>
+    <string name="theatre_play_clarity_1080p_text">1080P</string>
+    <string name="play_pre_loading_tips">即将从头播放...</string>
+    <string name="play_advert_loading_tips">提示</string>
+    <string name="theatre_play_current_kdm_text">同步影片不支持快进快退</string>
+    <string name="play_pre_replaying_loading_tips">已从上次&#160;%1$s&#160;开始播放</string>
+    <string name="theatre_play_clarity_selected">已选当前清晰度</string>
+    <string name="theatre_play_current_total_text">00:00:00</string>
+    <string name="player_please_wait">Prepare playing, please wait...</string>
+    <string name="player_remain_time">Remaining time:&#160;</string>
+    <string name="player_network_speed">Current speed:&#160;</string>
+    <string name="player_tips">
+        <![CDATA[Recommend watching movie with <font color=\'#41B240\'><b>4M(HD)</b></font> or <font color=\'#41B240\'><b>8M(ultra-clear)</b></font> bandwidth]]></string>
+    <string name="player_refresh">
+        <![CDATA[Unnable to play? Please try to press the <font color=\'#41B240\'><b>right arrow key</b></font> for refresh]]></string>
+    <string name="player_txt_Stereo">Stereo</string>
+    <string name="player_txt_Subtitle">Subtitle</string>
+    <string name="player_txt_loading">正在缓冲</string>
+    <string name="player_txt_connecting">连接内容服务器</string>
+    <string name="player_txt_connecting_times">
+        <![CDATA[连接内容服务器 (第<font color=\'#41B240\'><b>%1$d</b></font>次)]]></string>
+    <string name="player_txt_retry_times">
+        <![CDATA[噢出错了，正在为你重试播放 (第<font color=\'#41B240\'><b>%1$d</b></font>次)]]></string>
+
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback
+    </string>
+    <string name="VideoView_error_text_unknown">Unknown</string>
+    <string name="VideoView_error_button">OK</string>
+
+    <string name="VideoView_ar_aspect_fit_parent">Aspect / Fit parent</string>
+    <string name="VideoView_ar_aspect_fill_parent">Aspect / Fill parent</string>
+    <string name="VideoView_ar_aspect_wrap_content">Aspect / Wrap content</string>
+    <string name="VideoView_ar_match_parent">Free / Fill parent</string>
+    <string name="VideoView_ar_16_9_fit_parent">16:9 / Fit parent</string>
+    <string name="VideoView_ar_4_3_fit_parent">4:3 / Fit parent</string>
+
+    <string name="VideoView_render_none">Render: None</string>
+    <string name="VideoView_render_surface_view">Render: SurfaceView</string>
+    <string name="VideoView_render_texture_view">Render: TextureView</string>
+
+    <string name="VideoView_player_none">Player: None</string>
+    <string name="VideoView_player_AndroidMediaPlayer">Player: AndroidMediaPlayer</string>
+    <string name="VideoView_player_IjkMediaPlayer">Player: IjkMediaPlayer</string>
+    <string name="VideoView_player_IjkExoMediaPlayer">Player: IjkExoMediaPlayer</string>
+
+    <string name="TrackType_video">Video</string>
+    <string name="TrackType_audio">Audio</string>
+    <string name="TrackType_subtitle">Subtitle</string>
+    <string name="TrackType_timedtext">Timed text</string>
+    <string name="TrackType_metadata">Meta data</string>
+    <string name="TrackType_unknown">Unknown</string>
+
+    <!--menu-->
+    <string name="menu_filter">Filter</string>
+
+    <!-- tab -->
+    <string name="tag_cinema">同步院线</string>
+    <string name="tag_recommend">推荐</string>
+    <string name="tag_film_library">片库</string>
+    <string name="tag_get_coin">天天赚钱</string>
+    <string name="tag_user_center">用户中心</string>
+
+    <!-- 片库 -->
+    <string name="film_library_load_failed">获取导航数据异常</string>
+    <string name="film_library_no_film_of_type">该分类无影片</string>
+    <string name="film_library_get_films_by_type_failed">获取该分类影片失败</string>
+
+    <!-- 用户中心 主页-->
+    <string name="user_center_vip_name">全球播会员</string>
+    <string name="user_center_vip_remain_date"><![CDATA[会员剩余时长%1$s天]]></string>
+    <string name="user_center_info_account">账户余额</string>
+    <string name="user_center_tab_vip_open">开通会员</string>
+    <string name="user_center_tab_history">观影记录</string>
+    <string name="user_center_tab_i_want_to">我想看</string>
+    <string name="user_center_tab_message_notice">消息通知</string>
+    <string name="user_center_tab_my_account">我的账户</string>
+    <string name="user_center_tab_set_system">系统设置</string>
+    <string name="user_center_tab_tell_us">客服</string>
+    <string name="user_center_tab_logout">登出</string>
+    <string name="user_center_tab_message">消&#160;&#160;息</string>
+    <string name="user_center_message">消息</string>
+    <string name="user_center_template_failed">获取用户中心模板数据失败!</string>
+    <string name="user_see_advice">看广告</string>
+    <string name="user_my_consumption">交易记录</string>
+    <string name="user_exchange_shop">广告商城</string>
+    <string name="user_exchange_advert">广告</string>
+    <string name="user_zero_money">0.00元</string>
+    <string name="user_empty_ok">确&#160;&#160;定</string>
+
+    <!-- 用户中心-消息 -->
+    <string name="user_msg_count_max">99+</string>
+
+    <!-- 会员详情 充值-->
+    <string name="user_info_ipname">会员身份 :</string>
+    <string name="user_info_ipname_golive">全球播会员</string>
+    <string name="user_info_ipname_normol">吃瓜群众</string>
+    <string name="user_info_ipname_normol_ts">您还不是全球播会员</string>
+    <string name="vip_title_t_continue">会员套餐续费</string>
+    <string name="vip_title_t_open">会员套餐开通</string>
+    <string name="vip_pay_dlg_goods_name">商品价格&#160;:</string>
+    <string name="vip_pay_dlg_balance_name">账户余额支付&#160;:</string>
+    <string name="vip_pay_dlg_disparity_name">还需支付&#160;:</string>
+    <string name="vip_pay_dlg_ok_pay">确认支付</string>
+    <string name="vip_pay_dlg_cancel_topup">立即充值</string>
+    <string name="vip_pay_scan_pay">扫码支付&#160;:</string>
+    <string name="vip_pay_credit_totol">欠款总额&#160;:</string>
+    <string name="vip_open_scan_money">开通%1$s扫码支付%2$s元</string>
+    <string name="vip_pay_package_sucess">购买会员套餐成功!</string>
+    <string name="vip_pay_package_vip_monthly_sucess">连续包月套餐已购买成功！</string>
+    <string name="vip_pay_package_vip_monthly_detail_sucess">付费方式:支付宝/微信</string>
+    <string name="vip_pay_vip_validay">会员有效期"&#160;:&#160;%1$s</string>
+    <string name="vip_pay_package_failed">购买会员套餐失败!</string>
+    <string name="vip_buy_sent_finance">买套餐送理财</string>
+    <string name="vip_buy_sent_finance_detail">你购买了全球播&#160;\"%1$s\"&#160;商品获得收益赠送。\n全球播赠送给您定期理财产品，到期后您将获得可观收益。\n理财产品在%2$s个工作日完成购买，请耐心等待。</string>
+    <string name="vip_monthly">连续包月</string>
+    <string name="vip_monthly_repeat">您已开通连续包月套餐，不用重复购买啦！</string>
+    <string name="buy_vip_failed">对不起! 请求服务器失败!\n请稍后再试</string>
+
+    <string name="topup">充值</string>
+    <string name="topup_title_name">充&#160;值</string>
+    <string name="topup_help_call">任何充值问题 , 请致电：%1$s</string>
+    <string name="vip_qrcode_pay_quik_finish">付款成功后，会员立即生效</string>
+    <string name="topup_qrcode_pay_quik_finish">付款成功后，充值金额立即生效</string>
+    <string name="credit_qrcode_pay_quik_finish">付款成功后，额度立即生效</string>
+    <string name="qrcode_pay_sent_sign">您的手机APP将会收到微信或支付宝支付凭证</string>
+    <string name="topup_please_pay_yuan">请为您的账户充值%1$s元</string>
+    <string name="topup_dl_sucess_and_credit">您已成功充值%1$s元</string>
+    <string name="topup_dl_sucess_and_credit_prompt">注:&#160;有先看后付欠款时，充值将优先归还欠款。</string>
+    <string name="topup_failed">对不起! 充值失败!\n请稍后再试</string>
+    <string name="you_pay_intime_ok">&#160;(&#160;%1$s天内还款即可&#160;)&#160;</string>
+    <string name="credit_please_pay_yuan">请为您的先看后付账户还款%1$s元</string>
+    <string name="credit_btn_pay_yuan">您需要还款%1$s元</string>
+    <string name="credit_need_pay_name">本期应还款:</string>
+    <string name="credit_canused_name">可用余额:</string>
+    <string name="vip_pay_now_waiting">正在支付...请稍后</string>
+
+    <!-- 交易记录 观影记录 -->
+    <string name="consumption_no_history">您目前还没有交易记录...</string>
+    <string name="consumption_credit_pay">先看后付</string>
+    <string name="consumption_get_failed">获取交易记录失败</string>
+    <string name="user_movies_all">全部影片</string>
+    <string name="user_out_date">过期影片</string>
+    <string name="user_in_date">未过期影片</string>
+    <string name="valid_time_out_text">已过期</string>
+    <string name="valid_time_out_text_downshow">已下架</string>
+    <string name="valid_time_out_text_invalid">已失效</string>
+    <string name="valid_time_remain_hour">%1$s小时</string>
+    <string name="valid_time_remain_day">&#160;%1$s天</string>
+    <string name="blank">&#160;</string>
+    <string name="history_into_edit">进入编辑</string>
+    <string name="history_finish_edit">完成编辑</string>
+    <string name="history_getlist_failed">获取观影列表失败!</string>
+    <string name="history_you_have_no_record">您还未观影, 点击下列影片开启院线之旅</string>
+    <string name="history_getlist_waitting">正在获取影片列表,请稍后...</string>
+    <string name="history_watch_delete_failed">删除失败, 请稍后重试!</string>
+
+    <!-- 激活会员 -->
+    <string name="active_vip_one_month">1个月会员</string>
+    <string name="active_vip_success">恭喜 ! 激活成功 !</string>
+    <string name="active_vip_success_content">获得%1$s 会员延期至 : %2$s</string>
+    <string name="active_vip_failed">激活失败 !</string>
+    <string name="active_vip_failed_reason">错误原因 : %1$s</string>
+    <string name="active_vip_failed_tips">
+        <![CDATA[激活失败 , 请核对激活码后重试 , 今天可以输入次数<font color="#F50101">%1$d</font>次]]></string>
+
+    <!-- 客服 我的账户-->
+    <string name="custom_wechat_name">微信公众号</string>
+    <string name="custom_phone">客服电话：%1$s</string>
+    <string name="custom_qq">客服QQ：%1$s</string>
+    <string name="custom_prompt">联系我们</string>
+    <string name="custom_follow">关注我们</string>
+    <string name="custom_about">系统信息</string>
+    <string name="custom_title_service">客&#160;服</string>
+    <string name="user_credit_bottom_tips">先看后付:&#160;先观影后付款,操作简单更便捷%1$s;&#160;最终解析权归同步院线所有"
+    </string>
+    <string name="myinfo_title_name">我的账户</string>
+    <string name="message_loading">正在获取消息,请稍候...</string>
+    <string name="message_you_have_no_message">你还没有收到消息...</string>
+    <string name="myinfo_credit_acount_info">先看后付账户信息</string>
+    <string name="myinfo_user_credit_max_name">信用额度:</string>
+    <string name="myinfo_info_myinfo_name">账户信息</string>
+    <string name="myinfo_acount_money_name">账户余额 :</string>
+    <string name="myinfo_credit_canused_money">先看后付可用余额 :</string>
+    <string name="myinfo_credit_monthvip_name">连续包月 :</string>
+    <string name="myinfo_credit_monthvip_off">未开启</string>
+    <string name="myinfo_credit_monthvip_on">已开启</string>
+    <string name="myinfo_vip_remain_days">剩余时长%1$s天</string>
+    <string name="myinfo_active_by_card">会员卡激活</string>
+    <string name="myinfo_active_please_enter_card">请输入会员卡激活码</string>
+    <string name="myinfo_active_quiky_now">立即激活</string>
+
+    <string name="setting_movie_watch_need_kown">同步院线观影须知</string>
+    <string name="setting_pay_service_protocol">付费服务协议</string>
+    <string name="setting_version_update">版本更新</string>
+    <string name="setting_version_curr">当前版本：&#160;V&#160;%1$s</string>
+    <string name="setting_version_top_new">当前已是最新版本</string>
+    <string name="setting_version_checking">正在检测新版本</string>
+    <string name="setting_about">系统信息</string>
+    <string name="setting_about_into_detail">进入详情</string>
+    <string name="setting_version_have_new_upgrade">有新版本可升级</string>
+    <string name="setting_language_default_hd">默认清晰度选择</string>
+    <string name="setting_default_hd">默认清晰度</string>
+    <string name="setting_language">语言</string>
+    <string name="setting_language_choice">语言选择</string>
+    <string name="setting_chinese">中&#160;文</string>
+    <string name="setting_about_version">软件版本：&#160;%1$s</string>
+    <string name="setting_about_kdm">KDM版本：&#160;%1$s</string>
+    <string name="setting_about_terminal">终端版本：&#160;%1$s</string>
+    <string name="setting_about_mac">MAC地址：&#160;%1$s</string>
+    <string name="setting_about_ip">IP地址：&#160;%1$s</string>
+
+    <!--init-->
+    <string name="fail_connect_timeout">服务器连接超时</string>
+    <string name="commit_btn_text">确&#160;&#160;定</string>
+    <string name="close_btn_text">关&#160;&#160;闭</string>
+    <string name="jump_btn_text">跳&#160;&#160;过</string>
+    <string name="cancel_btn_text">返&#160;&#160;回</string>
+    <string name="retry_btn_text">重&#160;&#160;试</string>
+    <string name="exit_btn_text">退出应用</string>
+    <string name="advert_empty_tips">不存在该应用</string>
+    <string name="init_exit_dialog_title_text">开通%1$s扫码支付%2$s元</string>
+    <string name="init_exit_dialog_one_month">一个月</string>
+    <string name="init_exit_dialog_qrcode_move_btn">更多会员套餐</string>
+    <string name="init_exit_dialog_qrcode_exit">继续退出</string>
+    <string name="init_exit_dialog_advert_title_text">想不充值马上看电影？</string>
+    <string name="init_exit_dialog_advert_body_text">来零花钱，边赚边看，就这么任性，还有更多优惠等着你！</string>
+    <string name="init_exit_dialog_advert_commit_text">瞧一瞧&#160;%1$ss</string>
+    <string name="init_exit_dialog_advert_cancel_text">坚决离开</string>
+    <string name="init_exit_dialog_vip_tip1">请使用</string>
+    <string name="init_exit_dialog_vip_tip2">或</string>
+    <string name="init_exit_dialog_vip_tip3">扫描上面的二维码</string>
+    <string name="init_exit_dialog_vip_freedom_text1">会员特权&#160;:</string>
+    <string name="init_exit_dialog_vip_freedom_text2">院线新片免费畅享</string>
+    <string name="init_exit_dialog_vip_freedom_text3">高能大片优惠悦享</string>
+    <string name="init_exit_dialog_vip_freedom_text4">会员标识尊贵专享</string>
+    <string name="init_exit_dialog_vip_freedom_text5">续费折扣抄底乐享</string>
+    <string name="exit_dialog_recommend_movie_text">退出应用？</string>
+    <string name="exit_dialog_recommend_movie_cancel">回到院线</string>
+    <string name="exit_dialog_recommend_movie_commit">继续退出</string>
+
+    <!-- app page -->
+    <string name="app_page_get_failed">获取应用页失败</string>
+
+    <!-- boot image -->
+    <string name="count_down_circle_max">15</string>
+    <string name="count_down_circle_per_text">s</string>
+    <string name="count_down_circle_starting_degree">-90</string>
+
+    <!-- upgrade -->
+    <string name="dialog_update_info_normal1">有新版本了，请到应用商店更新</string>
+    <string name="dialog_update_info_force1">有重要更新，请到应用商店升级</string>
+    <string name="dialog_update_btn_txt_yes1">知道了</string>
+    <string name="dialog_update_install_title">版本更新</string>
+    <string name="dialog_update_info_title">发现新版本</string>
+    <string name="dialog_update_info_normal">下载最新版本进行升级？</string>
+    <string name="dialog_update_info_force">有重要更新，请立即升级!</string>
+    <string name="content_install_ongoing">正在升级中，请稍候...</string>
+    <string name="content_install">请不要关机或进行其他操作</string>
+    <string name="content_update_downloaded">安装包已成功下载</string>
+    <string name="content_install_local_force">有重要的更新，请安装升级！</string>
+    <string name="content_install_local_optional">有可用的更新，安装升级吗？</string>
+    <string name="tip_update_res">正在下载资源包，请稍候...</string>
+    <string name="tip_download">软件下载中</string>
+    <string name="tip_download2">请安装升级！</string>
+    <string name="btn_install">开始更新</string>
+    <string name="btn_later">下次再说</string>
+    <string name="btn_exit">退出应用</string>
+    <string name="dialog_update_info_memory">磁盘空间不足</string>
+    <string name="dialog_update_info_undown">下载异常，升级失败</string>
+    <string name="dialog_update_btn_download">开始下载</string>
+
+    <!-- mac地址重复-->
+    <string name="phone_number_string_detail1">用户你好，请输入手机号进行登录</string>
+    <string name="phone_number_string_detail2">(&#160;请务必使用原手机号登录&#160;)</string>
+    <string name="phone_number_string_detail3">请输入手机号码</string>
+    <string name="phone_number_string_detail4">登&#160;&#160;录</string>
+    <string name="phone_number_string_detail5">
+        提示：请使用在本机注册过的手机号码进行账号登录，若您未在本机注册过\n手机号码，请通过下方电话联系客服处理。
+    </string>
+    <string name="phone_number_string_detail6">下一步</string>
+    <string name="phone_number_string_detail7">手机号%1$s验证</string>
+    <string name="phone_number_string_detail8">验证码：</string>
+    <string name="phone_number_string_detail9">获取验证码</string>
+    <string name="phone_number_string_detail10">上一步</string>
+    <string name="phone_number_string_detail11">重新获取&#160;%1$ss</string>
+    <string name="phone_number_string_detail12">验证码已发送(120秒有效)</string>
+    <string name="phone_number_string_detail13">
+        <![CDATA[<font color="#0eddf7">%1$s</font>手机账户登录成功！]]></string>
+    <string name="phone_number_string_detail14">开启全球播影院&#160;%1$ss</string>
+    <string name="phone_number_string_detail15">（若您曾在本机登录过手机号，请务必使用原手机号进行登录）</string>
+    <string name="phone_number_string_detail16">客服电话：%1$s&#160;&#160;&#160;&#160;客服QQ：%2$s</string>
+    <string name="phone_number_string_detail17">验证码超时失效，请重新获取</string>
+    <string name="phone_number_string_detail18">验证码验证中，请稍待...</string>
+    <string name="phone_number_string_detail19">验&#160;&#160;证</string>
+    <string name="phone_number_string_detail20">登录中...</string>
+    <string name="phone_number_string_detail21">提示：本手机号禁止在本机登录，请尝试其它手机号或联系客服处理。</string>
+    <string name="phone_number_string_detail22">恭喜你,&#160;注册成功！</string>
+    <string name="phone_number_string_detail23">检测设备信息是否处于重复库中...</string>
+    <string name="phone_number_string_detail24">建议返回上一步使用手机登录，提高账户安全性</string>
+    <string name="phone_number_string_detail25">重新获取</string>
+    <!--<string name="e_1007">注册登录失败</string>-->
+    <!--<string name="e_2003">登录失败</string>-->
+    <!--<string name="e_2004">用户未登录</string>-->
+    <!--<string name="e_2005">会员信息不存在</string>-->
+    <!--<string name="e_2006">设备信息不存在</string>-->
+    <!--<string name="e_2007">密码错误</string>-->
+    <!--<string name="e_2011">电话已存在</string>-->
+    <!--<string name="e_2012">邮箱已存在</string>-->
+    <!--<string name="e_2013">会员ID为空</string>-->
+    <!--<string name="e_2014">密码不能为空</string>-->
+    <!--<string name="e_2015">LiveKey值错误</string>-->
+
+    <string name="init_credit_operation_alert_tips">先看后付介绍：为提升用户支付体验而推出，解释权归本公司所有。</string>
+    <string name="init_credit_operation_alert_title">先看后付账单到期</string>
+    <string name="init_credit_operation_alert_content">您的先看后付账单已到期&#160;&#160;(账单180天)\n为不影响您正常使用，请先完成账单还款</string>
+    <string name="init_credit_operation_alert_money">
+        <![CDATA[<font color="#f0a91b">账单金额:&#160;%1$s元&#160;</font><font color="#fd0001">(总额度%2$s元)</font>]]></string>
+    <string name="credit_operation_commit_btn_text">账单还款</string>
+    <string name="credit_operation_cancel_btn_text">稍后提醒我</string>
+    <string name="init_credit_operation_alert_content_all">
+        <![CDATA[您的先看后付账单已到期&#160;(账期%1$s天)，<font color="#f0a91b">账单金额:&#160;%2$s元&#160;</font><font color="#fd0001">(总额度%3$s元)</font>，为不影响您正常使用，请先完成账单还款]]></string>
+    <string name="init_finance_message_alert_title">余额:&#160;&#160;$%1$s元</string>
+    <string name="init_finance_message_alert_content">您在%1$s购买全球播“%2$s”商品，同步院线赠送理财收\n益已到账\n收益金额:&#160;&#160;%3$s元。\n欢迎再次购买赠送理财收益的套餐。</string>
+    <string name="init_finance_message_alert_content_new">
+        用户你好:\n您购买的全球播“%1$s”商品赠送理财产品，已完成定期理财产品\n的购买。\n定期理财到期时间:&#160;&#160;%2$s&#160;\n理财产品到期后7日内，收益将下发至您的钱包，敬请期待!
+    </string>
+    <string name="init_service_phone_qq">客服电话：%1$s&#160;&#160;&#160;&#160;客服QQ：%2$s</string>
+    <string name="finance_message_commit_btn_text">再次购买</string>
+    <string name="finance_message_cancel_btn_text">我知道了</string>
+
+    <string name="activity_layout_describle_text_detail">按遥控器【确定键】进入详情页，【返回键】退出</string>
+    <string name="activity_layout_describle_text_charge">按遥控器【确定键】进入充值页，【返回键】退出</string>
+    <string name="activity_layout_describle_text_buyvip">按遥控器【确定键】进入套餐购买页，【返回键】退出</string>
+    <string name="activity_layout_describle_text_trailer">按遥控器【确定键】进入精彩片花，【返回键】退出</string>
+    <string name="activity_layout_describle_text_myinfo">按遥控器【确定键】进入我的信息，【返回键】退出</string>
+    <string name="activity_layout_describle_text_mywallet">按遥控器【确定键】进入我的钱包，【返回键】退出</string>
+    <string name="activity_layout_describle_text_feedback">按遥控器【确定键】进入问题反馈，【返回键】退出</string>
+    <string name="activity_layout_describle_text_help">按遥控器【确定键】进入帮助，【返回键】退出</string>
+
+    <!-- 异常信息 -->
+    <string name="e_1001">系统异常</string>
+    <string name="e_1002">获取主配置信息异常</string>
+    <string name="e_1003">获取系统语言信息异常</string>
+    <string name="e_1004">获取系统默认反馈信息异常</string>
+    <string name="e_1005">版本升级失败</string>
+    <string name="e_1006">KDMServer升级失败</string>
+    <string name="e_1007">注册登录失败</string>
+    <string name="e_1008">提交会员信息异常</string>
+    <string name="e_1009">获取会员信息异常</string>
+    <string name="e_1010">获取会员签到现金值异常</string>
+    <string name="e_1011">会员签到异常</string>
+    <string name="e_1012">检查设备信息异常</string>
+    <string name="e_1013">修改密码异常</string>
+    <string name="e_1014">退出异常</string>
+    <string name="e_1015">生成频道列表返回信息异常</string>
+    <string name="e_1016">获取推荐频道列表异常</string>
+    <string name="e_1017">获取频道列表异常</string>
+    <string name="e_1018">根据套餐获取频道信息异常</string>
+    <string name="e_1019">获取会员收藏频道信息异常</string>
+    <string name="e_1020">根据分类获取频道信息异常</string>
+    <string name="e_1021">获取套餐列表异常</string>
+    <string name="e_1022">生成套餐列表返回信息异常</string>
+    <string name="e_1023">根据频道获取套餐信息异常</string>
+    <string name="e_1024">生成EPG列表返回信息异常</string>
+    <string name="e_1025">根据频道获取EPG信息异常</string>
+    <string name="e_1026">播放验证异常</string>
+    <string name="e_1027">获取影片列表异常</string>
+    <string name="e_1028">生成影片列表返回信息异常</string>
+    <string name="e_1029">获取影片详情信息异常</string>
+    <string name="e_1030">生成影片详情返回信息异常</string>
+    <string name="e_1031">获取电影票失败</string>
+    <string name="e_1032">获取播放Token异常</string>
+    <string name="e_1033">获取Divx播放Token超时</string>
+    <string name="e_1034">获取Divx播放Token异常</string>
+    <string name="e_1035">获取KDM票据信息超时</string>
+    <string name="e_1036">获取KDM票据信息异常</string>
+    <string name="e_1037">获取Divx播放Token失败</string>
+    <string name="e_1038">获取Divx播放Token失败</string>
+    <string name="e_1039">上报用户操作信息异常</string>
+    <string name="e_1040">上报用户观看信息异常</string>
+    <string name="e_1041">上报用户网速信息异常</string>
+    <string name="e_1042">获取预告片播放Token异常</string>
+    <string name="e_1043">上报异常信息异常</string>
+    <string name="e_1044">获取全球播公众号信息异常</string>
+    <string name="e_1045">设置频道锁密码异常</string>
+    <string name="e_2002">获取接口名称有误</string>
+    <string name="e_2003">登录失败</string>
+    <string name="e_2004">用户未登录</string>
+    <string name="e_2005">会员信息不存在</string>
+    <string name="e_2006">设备信息不存在</string>
+    <string name="e_2007">密码错误</string>
+    <string name="e_2008">两次输入的密码不一致</string>
+    <string name="e_2009">验证码输入有误</string>
+    <string name="e_2010">获取验证码超时</string>
+    <string name="e_2011">电话已存在</string>
+    <string name="e_2012">邮箱已存在</string>
+    <string name="e_2013">会员ID为空</string>
+    <string name="e_2014">密码不能为空</string>
+    <string name="e_2015">LiveKey值错误</string>
+    <string name="e_3001">频道信息不存在</string>
+    <string name="e_3002">没有可用的直播源</string>
+    <string name="e_4001">影片商品信息不存在</string>
+    <string name="e_4002">获取资源不存在</string>
+    <string name="e_4003">电影片已过期</string>
+    <!-- <string name="e_4004">电影票播放时间过期</string> -->
+    <string name="e_4005">获取电影票信息有误</string>
+    <string name="e_4011">XML格式错误</string>
+    <string name="e_4012">请求的电影不存在</string>
+    <string name="e_4013">电影档期有误</string>
+    <string name="e_4014">内部错误1</string>
+    <string name="e_4015">内部错误2</string>
+    <string name="e_4016">证书遗失</string>
+    <string name="e_4017">设备未注册</string>
+    <string name="e_5001">请求参数异常</string>
+    <string name="e_5002">公众信息不存在</string>
+
+    <!-- KDM error-->
+    <string name="e_100001">设备ID有误</string>
+    <string name="e_100002">无法连接注册服务器</string>
+    <string name="e_100003">恢复证书失败</string>
+    <string name="e_100004">注册证书失败</string>
+    <string name="e_100100">获取影片信息失败，影片不完整</string>
+    <string name="e_100101">获取影片信息失败，找不到影片</string>
+    <string name="e_100102">获取影片信息失败，路径无效</string>
+    <string name="e_100103">无该设备注册信息</string>
+    <string name="e_100104">票据存储失败</string>
+    <string name="e_100105">票据内容错误</string>
+    <string name="e_100124">票据与证书不符</string>
+    <string name="e_100125">票据不在档期内</string>
+    <string name="e_100126">票据已被使用过</string>
+    <string name="e_100127">资源文件不完整</string>
+    <string name="e_100128">票据与影片不符</string>
+    <string name="e_100106">升级失败，无法下载升级包</string>
+    <string name="e_100107">升级失败，校验升级包失败</string>
+    <string name="e_100110">播放失败，读取错误</string>
+    <string name="e_100111">播放失败，档期有误</string>
+    <string name="e_100112">播放失败，初始化失败</string>
+    <string name="e_100113">播放失败，无法创建线程</string>
+    <string name="e_100114">播放失败，当前已有播放</string>
+    <string name="e_100115">播放失败，未初始化</string>
+    <string name="e_100121">播放失败，资源地址为空</string>
+    <string name="e_100122">播放失败，证书异常</string>
+    <string name="e_100123">播放失败，票据失效</string>
+    <string name="e_100198">播放中断，播放资源文件错误</string>
+    <string name="e_100199">播放中断，无法记录断点信息</string>
+    <string name="e_100200">播放中断，内部错误</string>
+    <string name="e_100203">URL格式错误</string>
+    <string name="e_100206">播放中断，无法解析远程主机</string>
+    <string name="e_100228">播放中断，连接超时</string>
+    <string name="e_100116">暂停播放失败</string>
+    <string name="e_100117">恢复播放失败</string>
+    <string name="e_100118">当前没有播放</string>
+    <string name="e_100119">停止播放失败</string>
+    <string name="e_100120">命令格式错误</string>
+    <string name="e_120000">参数无效</string>
+    <string name="e_120001">devid空</string>
+    <string name="e_120002">未初始化</string>
+    <string name="e_120003">消息队列未创建</string>
+    <string name="e_120100">版本太低</string>
+    <string name="e_120101">未知错误</string>
+    <string name="e_120102">参数错误</string>
+    <string name="e_120103">连接失败</string>
+    <string name="e_120104">发送失败</string>
+    <string name="e_120105">格式错误</string>
+    <string name="e_120106">准备失败</string>
+    <string name="e_120107">读取失败</string>
+    <string name="e_120108">读取超时</string>
+
+    <string name="e_400012">提示：检测设备信息异常</string>
+    <string name="e_400013">提示：本手机号禁止在本机登录，请尝试其他手机号或联系客服处理</string>
+    <string name="e_400014">提示：手机号码不能为空；</string>
+    <string name="e_400020">注册异常</string>
+    <string name="e_400021">登录异常</string>
+    <string name="e_400022">账号信息为空</string>
+    <string name="e_400023">账号对应的会员信息为空</string>
+    <string name="e_400024">账号与设备信息不匹配</string>
+    <string name="e_400025">请输入验证码</string>
+    <string name="e_400026">验证码超时</string>
+    <string name="e_400027">验证码输入有误</string>
+    <string name="e_400028">请发送验证码</string>
+    <string name="e_400029">检测到您的终端信息异常</string>
+    <string name="e_400030">给您带来不便，敬请谅解</string>
+    <string name="e_400031">网络异常</string>
+    <string name="e_400032">系统维护</string>
+    <string name="e_400033">网络恢复后可继续使用</string>
+    <string name="e_400034">请检查您的网络连接情况</string>
+    <string name="e_400035">错误代码：%1$s</string>
+    <string name="e_400036">异常原因：%1$s</string>
+    <string name="e_400040">提示：请使用在本机注册过的手机号码进行账号登录，若您未在本机注册过\n手机号码，请通过下方电话联系客服处理</string>
+    <string name="e_400041">提示：本手机号禁止在本机登录，请尝试其他手机号或联系客服处理</string>
+
+    <!-- unified exception -->
+    <string name="err_unknown">未知错误</string>
+    <string name="err_no_network">网络连接中断，请检查...</string>
+    <string name="err_http">HTTP协议错误</string>
+    <string name="err_ssl">证书出错</string>
+    <string name="err_parse">解析错误</string>
+
+    <!-- user center -->
+    <string name="user_my_info">账户信息</string>
+    <string name="user_my_info_vip">开通会员</string>
+    <string name="user_my_info_vip_renew">会员续费</string>
+    <string name="user_my_info_to_pup">充值</string>
+    <string name="user_my_info_credit">先看后付</string>
+    <string name="user_my_info_record">交易记录</string>
+    <string name="user_my_info_history">观影记录</string>
+    <string name="user_my_info_vip_active">会员卡激活</string>
+    <string name="user_my_info_know">观影须知</string>
+    <string name="user_my_info_agreement">付费服务协议</string>
+    <string name="special_load_error">数据加载失败,请稍后重试...</string>
+
+    <string name="pay_service_agreement">
+        <![CDATA[尊敬的同步院线用户：<br />
+欢迎您使用同步院线付费视频服务，通过付费您可以轻松享受同步院线付费视频服务，同时请知悉，本协议的阅读和同意是付费视频服务成立的前提，请务必认真阅读并确认是否同意。<br />
+一、协议条款的接受<br />
+1.1、在您决定购买相关付费视频之前，请仔细阅读本付费协议条款并确认是否同意。如同意则可开始进行购买服务，如不同意则自动退出。<br />
+1.2、您一旦确认同意本协议，即表明您具有完全民事行为能力及能够独立承担民事责任，对本协议阅读理解无误。<br />
+二、收费标准和观看周期<br />
+2.1、收费标准：具体每项服务的收费标准以视频旁边的具体标价为准，一经购买即时生效。<br />
+2.2、每一个付费视频都有相应的观看服务周期，您能且只能在观看周期内观看，超出观看周期则服务即时结束。<br />
+三、连续包月服务<br />
+为满足您对同步院线会员采购连续性的需求，同步院线推出连续包月服务供您选择，服务条款如下：<br />
+3.1、有效期、终止<br />
+本协议自会员选择接受或使用本服务后生效，直至会员终止本服务/注销会员资格时终止，除同步院线另行规定外，您购买获得的连续包月服务均长期有效；会员有权随时选择终止本服务，终止后同步院线将停止向会员提供本服务。<br />
+3.2、支付方式<br />
+连续包月服务支持支付宝或微信方式支付，您有义务确保所选支付方式的账号下余额充足，如余额不足导致扣费失败，则同步院线有权在不再作另行通知的前提下，暂停或终止相应服务。<br />
+注：使用支付宝开通连续包月服务的，需开通支付宝【一键支付】（勾选即可），并绑定银行卡；未勾选《支付宝一键支付服务协议》及未绑定银行卡均无法成功开通连续包月服务。<br />
+3.3、退费<br />
+会员在选择终止本服务前已经委托同步院线自动续费扣款的指令仍然有效，除同步院线另行规定外，一旦购买成功，同步院线将不以任何方式对您所支付的费用予以退还。<br />
+四、变更及免责条款<br />
+4.1、同步院线可对付费视频的观看服务周期、购买价格等事宜进行调整，所调整事宜即时生效但不影响已交易部分。<br />
+4.2、因不可抗力导致的服务的中断或终止而造成的任何损失，同步院线依法免责。<br />]]></string>
+
+    <string name="user_topup_btn_time">确定&#160;&#160;%1$ds</string>
+    <string name="data_loading_in">奋力加载中,请稍后...</string>
+</resources>

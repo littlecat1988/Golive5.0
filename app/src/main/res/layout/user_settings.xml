@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/user_setting_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/setting_title_mg_t"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/user_center_tab_set_system"
+            android:textSize="@dimen/vip_package_vip_title_size"
+            android:textColor="@color/color_ee"/>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/setting_list_mg_t"
+            android:layout_marginLeft="@dimen/setting_list_mg_l"
+            android:layout_marginRight="@dimen/setting_list_mg_r"
+            android:layout_marginBottom="@dimen/setting_list_mg_b">
+
+            <ImageView
+                android:id="@+id/user_setting_bg_image"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"/>
+
+            <ListView
+                android:id="@+id/user_setting_lv_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/setting_list_driver_h"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:listSelector="@drawable/sel_user_info_poster"
+                android:scrollbarStyle="outsideOverlay"
+                android:minHeight="@dimen/setting_list_min_h"
+                android:scrollbarFadeDuration="0"
+                android:scrollbarThumbVertical="@drawable/channel_roll"
+                android:scrollbars="vertical"/>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>
+

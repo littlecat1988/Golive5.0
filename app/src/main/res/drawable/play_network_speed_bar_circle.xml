@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false"
+                android:variablePadding="true">
+    <item
+        android:drawable="@drawable/play_network_speed_bar_01"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_02"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_03"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_04"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_05"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_06"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_07"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_08"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_09"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_10"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_11"
+        android:duration="60"
+        android:gravity="center"/>
+    <item
+        android:drawable="@drawable/play_network_speed_bar_12"
+        android:duration="60"
+        android:gravity="center"/>
+</animation-list>
+
+
+    <!--
+    <rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:drawable="@drawable/repeat_progressbar_bg"
+        android:fromDegrees="360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="0" />-->

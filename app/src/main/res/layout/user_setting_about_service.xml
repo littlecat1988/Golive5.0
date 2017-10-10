@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/user_setting_service_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/user_set_service_title_top"
+        android:gravity="center_horizontal"
+        android:text="@string/setting_pay_service_protocol"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/user_set_service_title_size"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/user_set_service_layout_top">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/user_set_service_layout_bottom"
+            android:layout_marginLeft="@dimen/user_set_service_layout_left"
+            android:layout_marginRight="@dimen/user_set_service_layout_right"
+            android:fadeScrollbars="false"
+            android:fadingEdge="vertical"
+            android:fadingEdgeLength="@dimen/user_set_service_scrollview_length"
+            android:requiresFadingEdge="vertical"
+            android:scrollbarFadeDuration="0"
+            android:scrollbarSize="@dimen/user_set_service_scrollview_barsize"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/user_consumtion_list_thumb"
+            android:scrollbarTrackVertical="@drawable/user_consumtion_list_track"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/user_setting_service_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:descendantFocusability="beforeDescendants"
+                android:gravity="left"
+                android:lineSpacingExtra="0dp"
+                android:lineSpacingMultiplier="1.34"
+                android:paddingRight="@dimen/user_set_service_detail_right"
+                android:text=""
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/user_set_service_detail_size"/>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/user_setting_service_btn"
+            android:layout_width="@dimen/user_set_service_btn_width"
+            android:layout_height="@dimen/center_button_hight"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/user_set_service_btn_bottom"
+            android:background="@drawable/sel_user_button_bg"
+            android:gravity="center"
+            android:text="@string/user_empty_ok"
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/user_set_service_btn_size">
+            <requestFocus/>
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>

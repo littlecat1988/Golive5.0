@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/kdm_player_surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/kdm_player_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+    <!--
+    <include
+        layout="@layout/player_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="@dimen/player_vg_progress_margin_top"/> -->
+</FrameLayout>

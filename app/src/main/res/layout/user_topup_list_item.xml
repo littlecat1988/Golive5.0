@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/topup_item_h">
+
+    <RelativeLayout
+        android:id="@+id/user_center_topup_lv_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/topup_item_h"
+        android:layout_centerInParent="true"
+        android:background="@drawable/sel_user_topup_item_bg">
+
+        <ImageView
+            android:id="@+id/tv_benefit_icon"
+            android:layout_width="@dimen/vip_package_lst_item_icon_w"
+            android:layout_height="@dimen/vip_package_lst_item_icon_w"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/user_vip_coner" />
+
+        <com.golive.cinema.views.RotateTextViewVip
+            android:id="@+id/tv_benefit"
+            android:layout_width="@dimen/vip_package_lst_item_icontext_w"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/vip_package_lst_item_icontext_pl"
+            android:singleLine="true"
+            android:textColor="@color/item_white_color"
+            android:textSize="@dimen/vip_package_lst_item_benefit_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/topup_item_price_big_mg_t"
+                android:gravity="center"
+                android:textColor="@color/sel_user_color_gold"
+                android:textSize="@dimen/topup_item_price_big_ts" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/topup_item_tv_bottom_mg_b"
+            android:layout_marginLeft="@dimen/topup_item_tv_bottom_mg_lr"
+            android:layout_marginRight="@dimen/topup_item_tv_bottom_mg_lr"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@color/vip_text_deep_red"
+            android:textSize="@dimen/topup_item_tv_bottom_ts" />
+    </RelativeLayout>
+</RelativeLayout>

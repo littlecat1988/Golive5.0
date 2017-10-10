@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/notice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/notice_text_size"/>
+
+    <ImageView
+        android:id="@+id/notice_igv"
+        android:layout_width="@dimen/notice_img_size"
+        android:layout_height="@dimen/notice_img_size"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/notice_img_margin_right"
+        android:layout_marginTop="@dimen/notice_img_margin_top"/>
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/qrcode_pay_title_tv"
+        style="@style/qrcode_pay_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qrcode_pay_title_margin_top"
+        android:text="@string/qrcode_pay_normal_vip_monthly"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/qrcode_pay_width"
+        android:layout_height="@dimen/qrcode_pay_height"
+        android:layout_below="@+id/qrcode_pay_title_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qrcode_pay_margin_top"
+        android:background="@color/qr_code_pay_bg">
+
+        <LinearLayout
+            android:id="@+id/qrcode_pay_vg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qrcode_pay_qrcode_margin_left"
+            android:layout_marginTop="@dimen/qrcode_pay_qrcode_vip_monthly_margin_top"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/qrcode_pay_fl"
+                android:layout_width="@dimen/qrcode_pay_view_size_w"
+                android:layout_height="@dimen/qrcode_pay_view_size_w"/>
+
+            <LinearLayout
+                android:id="@+id/filmdetail_pay_vg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/qrcode_pay_tv_qr_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/qrcode_pay_txt_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qrcode_pay_qrtxt_1"/>
+
+                <ImageView
+                    android:layout_width="@dimen/qrcode_pay_img_w"
+                    android:layout_height="@dimen/qrcode_pay_img_w"
+                    android:src="@drawable/wechat_small"/>
+
+                <TextView
+                    style="@style/qrcode_pay_txt_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qrcode_pay_qrtxt_2"/>
+
+                <ImageView
+                    android:layout_width="@dimen/qrcode_pay_img_w"
+                    android:layout_height="@dimen/qrcode_pay_img_w"
+                    android:src="@drawable/alipay_small"/>
+
+                <TextView
+                    style="@style/qrcode_pay_txt_qr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qrcode_pay_qrtxt_3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/qrcode_pay_vip_monthly_agree_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/qrcode_pay_vip_monthly_agree_select_size"
+                    android:layout_height="@dimen/qrcode_pay_vip_monthly_agree_select_size"
+                    android:src="@drawable/select_rect"/>
+                <TextView
+                    android:id="@+id/qrcode_pay_vip_monthly_agree_tv"
+                    style="@style/qrcode_pay_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/qrcode_pay_vip_monthly_agree_select_margin"
+                    android:text="@string/qrcode_pay_agree_vip_monthly"
+                    android:textColor="@color/purchase_state"
+                    android:textSize="@dimen/qrcode_pay_notice_font_size"
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/qrcode_content_vg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qrcode_pay_igv_margin_right"
+            android:layout_marginTop="@dimen/qrcode_pay_content_vip_monthly_margin_top"
+            android:layout_toRightOf="@+id/qrcode_pay_vg"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qrcode_pay_price_tag_tv"
+                    style="@style/qrcode_pay_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qrcode_pay_price_vip_monthly"/>
+
+                <TextView
+                    android:id="@+id/qrcode_pay_need_pay_tag_tv"
+                    style="@style/qrcode_pay_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/qrcode_pay_content_line_space_vip_monthly"
+                    android:text="@string/qrcode_pay_scan_pay"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/qrcode_pay_content_margin_left"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qrcode_pay_price_tv"
+                    style="@style/qrcode_pay_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/qrcode_pay_need_pay_tv"
+                    style="@style/qrcode_pay_txt_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/qrcode_pay_content_line_space_vip_monthly"
+                    android:textColor="@color/user_coin_color"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/qrcode_content_vg"
+            android:layout_below="@+id/qrcode_content_vg"
+            android:layout_marginTop="@dimen/qrcode_pay_vip_monthly_tips_margin_top"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qrcode_pay_notice_tv"
+                style="@style/qrcode_pay_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qrcode_pay_to_register_vip"
+                android:textSize="@dimen/qrcode_pay_play_film_font_size"/>
+
+            <TextView
+                style="@style/qrcode_pay_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/qrcode_pay_play_film_margin_right"
+                android:text="@string/qrcode_pay_notice_vip_monthly"
+                android:textColor="@color/purchase_state"
+                android:textSize="@dimen/qrcode_pay_notice_font_size"/>
+
+            <Button
+                android:id="@+id/qrcode_pay_vip_monthly_known_btn"
+                style="@style/qrcode_pay_btn_vip_monthly"
+                android:layout_width="@dimen/qrcode_pay_view_size_w"
+                android:layout_height="@dimen/qrcode_pay_vip_monthly_btn_height"
+                android:layout_marginTop="@dimen/qrcode_pay_vip_monthly_btns_margin_top"
+                android:text="@string/qrcode_pay_vip_monthly_known"/>
+
+            <Button
+                android:id="@+id/qrcode_pay_pay_service_known_btn"
+                style="@style/qrcode_pay_btn_vip_monthly"
+                android:layout_width="@dimen/qrcode_pay_view_size_w"
+                android:layout_height="@dimen/qrcode_pay_vip_monthly_btn_height"
+                android:layout_marginTop="@dimen/confirm_purchase_top_up_margin_top"
+                android:text="@string/qrcode_pay_pay_service_known"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/qrcode_pay_help_tv"
+        style="@style/confirm_purchase_txt_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/credit_expire_introduce_margin_bottom"
+        android:text="@string/purchase_help_info"/>
+</RelativeLayout>

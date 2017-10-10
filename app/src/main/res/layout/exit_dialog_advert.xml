@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/init_exit_dialog_advert_title"
+        style="@style/film_detail_txt_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/init_exit_dialog_advert_title_margin_top"
+        android:lines="1"
+        android:text="@string/init_exit_dialog_advert_title_text"
+        android:textSize="@dimen/init_exit_dialog_advert_title_size"
+        android:textColor="@color/init_exit_dialog_title_color"/>
+
+
+    <TextView
+        android:id="@+id/init_exit_dialog_advert_body"
+        style="@style/film_detail_txt_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/init_exit_dialog_advert_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/init_exit_dialog_advert_body_margin_top"
+        android:lines="1"
+        android:text="@string/init_exit_dialog_advert_body_text"
+        android:textSize="@dimen/init_exit_dialog_advert_title_size"
+        android:textColor="@color/init_exit_dialog_title_color"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/init_exit_dialog_advert_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/init_exit_dialog_advert_body"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/init_exit_dialog_advert_layout_margin_top">
+        <Button
+            android:id="@+id/init_exit_dialog_advert_commit"
+            android:layout_width="@dimen/init_exit_dialog_advert_button_width"
+            android:layout_height="@dimen/init_exit_dialog_advert_button_height"
+            android:layout_alignParentLeft="true"
+            style="@style/init_commit_btn_style">
+            <requestFocus/>
+        </Button>
+        <Button
+            android:id="@+id/init_exit_dialog_advert_cancel"
+            android:layout_width="@dimen/init_exit_dialog_advert_button_width"
+            android:layout_height="@dimen/init_exit_dialog_advert_button_height"
+            android:layout_alignParentRight="true"
+            android:text="@string/init_exit_dialog_advert_cancel_text"
+            style="@style/init_commit_btn_style"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <!-- poster -->
+    <ImageView
+        android:id="@+id/topic_poster"
+        android:layout_width="@dimen/topic_poster_width"
+        android:layout_height="@dimen/topic_poster_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/topic_poster_margin_top"
+        android:scaleType="fitXY"
+        android:src="@color/default_bg"/>
+
+    <!-- recommend topics -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/topic_recommend_rv"
+        android:layout_width="@dimen/topic_recommend_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_poster"
+        android:layout_centerHorizontal="true"
+        android:clipChildren="false"
+        android:descendantFocusability="afterDescendants"
+    />
+
+    <FrameLayout
+        android:id="@+id/topic_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/topic_recommend_rv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/topic_recommend_item_margin_h"
+        android:background="@drawable/view_focus_bg"
+        android:visibility="gone">
+        <FrameLayout
+            android:layout_width="@dimen/topic_recommend_item_width"
+            android:layout_height="@dimen/topic_recommend_item_height"/>
+    </FrameLayout>
+</RelativeLayout>

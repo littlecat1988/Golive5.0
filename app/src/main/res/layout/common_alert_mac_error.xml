@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mac_error_alert_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_title_top"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/e_400021"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_title_size"/>
+
+    <TextView
+        android:id="@+id/mac_error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mac_error_alert_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_text_top"
+        android:gravity="center"
+        android:text="@string/e_400029"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_text_size"/>
+
+    <TextView
+        android:id="@+id/mac_error_alert_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mac_error_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_mac_text_top"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/init_common_alert_text_color"
+        android:textSize="@dimen/alert_dialog_mac_text_size"/>
+
+    <Button
+        android:id="@+id/mac_error_alert_btn"
+        style="@style/init_commit_btn_style"
+        android:layout_width="@dimen/alert_dialog_btn_width"
+        android:layout_height="@dimen/alert_dialog_btn_height"
+        android:layout_below="@id/mac_error_alert_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/alert_dialog_btn_top"
+        android:text="@string/exit_btn_text">
+
+        <requestFocus/>
+    </Button>
+
+    <TextView
+        android:id="@+id/service_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/alert_dialog_phone_bottom"
+        android:textColor="@color/init_exit_dialog_phone_color"
+        android:textSize="@dimen/alert_dialog_phone_size"/>
+    <!--
+        <TextView
+            android:id="@+id/mac_error_bottom_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="28.66dp"
+            android:gravity="center"
+            android:text="@string/phone_number_string_detail16"
+            android:textColor="@color/network_error_color__bottom_tips"
+            android:textSize="18sp" /> -->
+</RelativeLayout>

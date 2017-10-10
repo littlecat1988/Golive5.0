@@ -1,0 +1,281 @@
+<resources
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<style name="BaseTheme" parent="android:Theme.Holo.NoActionBar.Fullscreen">-->
+    <!--&lt;!&ndash; <item name="android:lineSpacingMultiplier">1.05</item> &ndash;&gt;-->
+
+    <!--</style>-->
+
+    <!--<style name="AppTheme" parent="BaseTheme">-->
+    <!--<item name="android:windowBackground">@drawable/homg_bg</item>-->
+    <!--&lt;!&ndash;-->
+    <!--<item name="android:windowAnimationStyle">@null</item>-->
+    <!--&ndash;&gt;-->
+    <!--</style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/homg_bg</item>
+    </style>
+
+    <style name="SplashActivityTheme" parent="Theme.Design.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_activity_bg</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="AppTheme">
+        <!-- 设置允许窗口半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!-- 引用Android系统的动画半透明样式 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+
+        <!-- 设定窗口背景颜色 -->
+        <item name="android:windowBackground">@color/translucent</item>
+
+        <!-- 隐藏窗口标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- 设定文字前景色 -->
+        <item name="android:colorForeground">#fff</item>
+    </style>
+
+    <!-- film detail -->
+    <style name="film_detail_txt">
+        <item name="android:textColor">@color/color_ee</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="film_detail_txt_title" parent="@style/film_detail_txt">
+        <item name="android:textSize">@dimen/film_detail_txt_title_font_size</item>
+    </style>
+
+    <style name="film_detail_txt_introduce" parent="@style/film_detail_txt">
+        <item name="android:textSize">@dimen/film_detail_txt_introduce_font_size</item>
+    </style>
+
+    <style name="film_detail_txt_introduce_detail">
+        <item name="android:textColor">@color/color_ee</item>
+        <item name="android:textSize">@dimen/film_detail_txt_introduce_font_size</item>
+    </style>
+
+    <style name="film_detail_txt_button" parent="@style/film_detail_txt">
+        <item name="android:textSize">@dimen/film_detail_txt_btn_font_size</item>
+    </style>
+
+    <style name="film_detail_txt_download" parent="@style/film_detail_txt">
+        <item name="android:textSize">@dimen/film_detail_txt_download_font_size</item>
+    </style>
+
+    <style name="film_detail_txt_download_progress" parent="@style/film_detail_txt">
+        <item name="android:textSize">@dimen/film_detail_txt_download_progress_font_size</item>
+        <item name="android:textColor">@color/film_detail_download_progress_txt</item>
+    </style>
+
+    <style name="film_detail_progressBar_base"
+           parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+    </style>
+
+    <style name="film_detail_download_progressBar_normal" parent="film_detail_progressBar_base">
+        <item name="android:progressDrawable">@drawable/sel_film_detail_download_progress_normal
+        </item>
+    </style>
+
+    <style name="film_detail_download_progressBar_error"
+           parent="film_detail_download_progressBar_normal">
+        <item name="android:progressDrawable">@drawable/sel_film_detail_download_progress_error
+        </item>
+    </style>
+
+    <style name="film_detail_play_progressBar" parent="film_detail_download_progressBar_normal">
+        <item name="android:progressDrawable">@drawable/sel_film_detail_play_progress</item>
+    </style>
+
+    <!-- download -->
+    <style name="download_sel_media_txt_title_default">
+        <item name="android:textColor">@color/color_ee</item>
+    </style>
+
+    <style name="download_sel_media_txt_title" parent="@style/download_sel_media_txt_title_default">
+        <item name="android:textSize">@dimen/download_sel_media_title_font_size</item>
+    </style>
+
+    <style name="download_sel_media_txt_content"
+           parent="@style/download_sel_media_txt_title_default">
+        <item name="android:textSize">@dimen/download_sel_media_content_font_size</item>
+    </style>
+
+    <style name="download_sel_media_txt_gray" parent="@style/download_sel_media_txt_title_default">
+        <item name="android:textSize">@dimen/download_sel_media_content_small_font_size</item>
+        <item name="android:textColor">@color/download_select_media_gray</item>
+    </style>
+
+    <style name="download_sel_btn" parent="@style/download_sel_media_txt_content">
+        <item name="android:background">@drawable/selector_confirm_purchase_btn_bg</item>
+    </style>
+
+    <style name="restore_download_progressBar"
+           parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/restore_download_progress</item>
+    </style>
+
+    <!-- player -->
+    <style name="player_txt_white_big">
+        <item name="android:textSize">@dimen/player_tv_font_size_big</item>
+        <item name="android:textColor">@color/color_ee</item>
+    </style>
+    <style name="player_txt_white_small">
+        <item name="android:textSize">@dimen/player_tv_font_size_small</item>
+        <item name="android:textColor">@color/color_ee</item>
+    </style>
+
+    <style name="theatre_detail_txt_btn">
+        <item name="android:textSize">@dimen/cinema_detail_txt_btn_back_font_size</item>
+        <item name="android:textColor">@color/color_ee</item>
+    </style>
+
+    <!-- confirm purchase dialog -->
+    <style name="confirm_purchase_txt">
+        <item name="android:textColor">@color/confirm_purchase_txt</item>
+    </style>
+
+    <style name="confirm_purchase_txt_title" parent="@style/confirm_purchase_txt">
+        <item name="android:textSize">@dimen/confirm_purchase_title_font_size</item>
+    </style>
+
+    <style name="confirm_purchase_txt_content" parent="@style/confirm_purchase_txt">
+        <item name="android:textSize">@dimen/confirm_purchase_content_font_size</item>
+    </style>
+
+    <style name="confirm_purchase_txt_help" parent="@style/confirm_purchase_txt">
+        <item name="android:textColor">@color/confirm_purchase_help_txt</item>
+        <item name="android:textSize">@dimen/confirm_purchase_help_font_size</item>
+    </style>
+
+    <style name="confirm_purchase_btn" parent="@style/confirm_purchase_txt_content">
+        <item name="android:background">@drawable/selector_confirm_purchase_btn_bg</item>
+    </style>
+
+    <!-- qr code pay -->
+    <style name="qrcode_pay_txt">
+        <item name="android:textColor">@color/confirm_purchase_txt</item>
+    </style>
+    <style name="qrcode_pay_txt_title" parent="@style/qrcode_pay_txt">
+        <item name="android:textSize">@dimen/qrcode_pay_title_font_size</item>
+    </style>
+    <style name="qrcode_pay_txt_content" parent="@style/qrcode_pay_txt">
+        <item name="android:textSize">@dimen/qrcode_pay_content_font_size</item>
+    </style>
+
+    <style name="qrcode_pay_txt_qr" parent="@style/qrcode_pay_txt">
+        <item name="android:textSize">@dimen/qrcode_pay_qrtxt_font_size</item>
+    </style>
+
+    <style name="qrcode_pay_btn_vip_monthly" parent="@style/qrcode_pay_txt">
+        <item name="android:textSize">@dimen/qrcode_pay_content_font_size</item>
+        <item name="android:background">@drawable/selector_confirm_purchase_btn_bg</item>
+    </style>
+
+    <!-- 全屏对话框 -->
+    <style name="dialog_fullscreen_base">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimAmount">1</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="dialog_fullscreen" parent="@style/dialog_fullscreen_base">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="dialog_fullscreen_bg" parent="@style/dialog_fullscreen_base">
+        <item name="android:windowBackground">@drawable/homg_bg</item>
+    </style>
+
+    <style name="style_dialog_base" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="boot_image_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimAmount">1</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="init_commit_btn_style">
+        <item name="android:textSize">@dimen/init_commit_btn_size</item>
+        <item name="android:textColor">@color/init_common_alert_btn_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/dialog_button_selector</item>
+    </style>
+
+    <style name="repeat_phone_progress_circle">
+        <item name="android:indeterminateDrawable">@anim/repeat_progressbar_circle</item>
+        <item name="android:minWidth">@dimen/repeat_phone_progress_min_w</item>
+        <item name="android:minHeight">@dimen/repeat_phone_progress_min_w</item>
+        <item name="android:maxWidth">@dimen/repeat_phone_progress_max_w</item>
+        <item name="android:maxHeight">@dimen/repeat_phone_progress_max_w</item>
+    </style>
+
+    <style name="play_network_speed_bar">
+        <item name="android:src">@drawable/play_network_speed_bar_circle</item>
+        <item name="android:minWidth">@dimen/play_network_speed_min_w</item>
+        <item name="android:minHeight">@dimen/play_network_speed_min_w</item>
+        <item name="android:maxWidth">@dimen/play_network_speed_max_w</item>
+        <item name="android:maxHeight">@dimen/play_network_speed_max_w</item>
+    </style>
+
+    <style name="main_tab_btn_style">
+        <item name="android:textSize">@dimen/main_tab_btn_size</item>
+        <item name="android:textColor">@color/main_tab_text_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/main_tab_bg_selector</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingLeft">@dimen/main_tab_item_text_left</item>
+        <item name="android:paddingTop">@dimen/main_tab_item_text_top</item>
+        <item name="android:paddingRight">@dimen/main_tab_item_text_left</item>
+        <item name="android:paddingBottom">@dimen/main_tab_item_text_top</item>
+        <item name="android:layout_marginLeft">@dimen/main_tab_btn_left</item>
+        <item name="android:layout_marginRight">@dimen/main_tab_btn_left</item>
+    </style>
+
+    <style name="player_clarity_button_style">
+        <item name="android:layout_width">@dimen/player_clarity_button_width</item>
+        <item name="android:layout_height">@dimen/player_clarity_button_height</item>
+        <item name="android:textSize">@dimen/player_clarity_button_text_size</item>
+        <item name="android:textColor">@color/movie_name_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/play_clarity_button_selector</item>
+    </style>
+
+    <style name="data_loading_dialog_fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <item name="android:backgroundDimAmount">0.5</item><!--模糊-->
+    </style>
+</resources>

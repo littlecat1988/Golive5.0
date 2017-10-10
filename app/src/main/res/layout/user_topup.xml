@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/user_topup_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/topup_title_mg_t"
+            android:layout_centerHorizontal="true"
+            android:text="@string/topup_title_name"
+            android:textSize="@dimen/topup_title_ts"
+            android:textColor="@color/item_white_color"/>
+
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignParentRight="true"
+                      android:layout_alignParentTop="true"
+                      android:orientation="horizontal"
+                      android:layout_marginTop="@dimen/topup_money_num_tv_mg_t"
+                      android:layout_marginRight="@dimen/topup_money_num_tv_mg_r">
+
+            <TextView
+                android:id="@+id/topup_money_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.42"
+                android:text=""
+                android:textSize="@dimen/topup_money_num_tv_ts"
+                android:textColor="@color/vip_text_hui"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/topup_vg_bottom_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/topup_vg_bottom_view_mg_b"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/topup_vg_bottom_phonetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.52"
+                android:textSize="@dimen/topup_vg_bottom_tv_ts"
+                android:textColor="@color/vip_text_hui"
+                android:text=""/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/user_topup_title_tv">
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/topup_topup_list_mg_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <GridView
+                    android:id="@+id/topup_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@null"
+                    android:horizontalSpacing="@dimen/topup_item_horizontal_spacing"
+                    android:verticalSpacing="@dimen/topup_item_vertical_spacing"
+                    android:listSelector="@drawable/list_item_selector"
+                    android:numColumns="3"
+                    android:scrollbarFadeDuration="100"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbarThumbVertical="@drawable/channel_roll"
+                    android:scrollbars="vertical"
+                />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

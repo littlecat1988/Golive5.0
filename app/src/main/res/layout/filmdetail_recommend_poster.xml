@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/poster_vg"
+             android:layout_width="@dimen/film_detail_recommend_poster_width_warp"
+             android:layout_height="@dimen/film_detail_recommend_poster_height_warp"
+             android:background="@drawable/selector_bg_recommend_poster"
+             android:clickable="true"
+             android:focusable="true"
+             android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/poster_igv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/movie_init_bkg"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/film_detail_recommend_poster_shadow"/>
+
+    <TextView
+        android:id="@+id/poster_name_tv"
+        style="@style/film_detail_txt_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/film_detail_txt_recommend_poster_margin_bottom"
+        android:layout_marginLeft="@dimen/film_detail_txt_recommend_poster_margin_bottom"
+        android:layout_marginRight="@dimen/film_detail_txt_recommend_poster_margin_bottom"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="@dimen/film_detail_txt_recommend_poster_font_size"/>
+</FrameLayout>

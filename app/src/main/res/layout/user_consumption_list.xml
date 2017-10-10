@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/user_wallet_list_item_h"
+    android:background="@drawable/sel_user_comsumtion_item_bg">
+
+    <View
+        android:id="@+id/user_wallet_header_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/consumtion_header_line_h"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/cusumption_item_line_mg_lr"
+        android:layout_marginRight="@dimen/cusumption_item_line_mg_lr"
+        android:background="#20ffffff"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/user_wallet_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/consumtion_bottom_line_h"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/cusumption_item_line_mg_lr"
+        android:layout_marginRight="@dimen/cusumption_item_line_mg_lr"
+        android:background="#10ffffff"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/user_center_myinfo_listview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_wallet_list_item_h"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/cusumption_item_mg_lr"
+        android:layout_marginRight="@dimen/cusumption_item_mg_lr"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/user_tv_csp_time"
+            android:layout_width="@dimen/cusumption_item_time_w"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/cusumption_item_text_mg_t"
+            android:gravity="center_vertical|right"
+            android:lineSpacingMultiplier="1.22"
+            android:maxLines="1"
+            android:textColor="@color/sel_user_color_info_text"
+            android:textSize="@dimen/cusumption_list_item_ts" />
+
+        <TextView
+            android:id="@+id/user_tv_csp_gold"
+            android:layout_width="@dimen/cusumption_item_gold_w"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/cusumption_item_text_mg_t"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.22"
+            android:maxLines="1"
+            android:textColor="@color/sel_user_color_info_text"
+            android:textSize="@dimen/cusumption_list_item_ts" />
+
+
+        <TextView
+            android:id="@+id/user_tv_credit_pay"
+            android:layout_width="@dimen/cusumption_item_credit_w"
+            android:layout_height="@dimen/cusumption_item_credit_h"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/user_tv_csp_gold"
+            android:background="@drawable/sel_corner_huang"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/cusumption_item_line_mg_lr"
+            android:paddingRight="@dimen/cusumption_item_line_mg_lr"
+            android:text="@string/consumption_credit_pay"
+            android:textColor="@color/sel_user_color_consumtion_credit_t"
+            android:textSize="@dimen/cusumption_item_credit_ts"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/user_tv_csp_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/cosumption_item_name_mg_r"
+            android:layout_toLeftOf="@id/user_tv_csp_gold"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical|left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/sel_user_color_info_text"
+            android:textSize="@dimen/cusumption_list_item_ts" />
+    </RelativeLayout>
+</RelativeLayout>

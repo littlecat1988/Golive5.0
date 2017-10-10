@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/play_pre_loading_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/play_pre_loading_layout_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/player_loading_layout_logo_top"
+        android:scaleType="fitXY"
+        android:src="@drawable/play_loading_layout_logo"/>
+
+    <TextView
+        android:id="@+id/play_pre_loading_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_pre_loading_layout_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/player_loading_layout_name_top"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/ok_title"
+        android:textSize="@dimen/player_loading_layout_name_size"/>
+
+    <ImageView
+        android:id="@+id/play_pre_loading_clarity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/play_pre_loading_name"
+        android:layout_marginLeft="@dimen/player_loading_clarity_margin_left"
+        android:layout_marginTop="@dimen/player_loading_clarity_margin_top"
+        android:layout_toRightOf="@id/play_pre_loading_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/play_clarity_high_bg"/>
+
+    <TextView
+        android:id="@+id/play_pre_loading_replaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_pre_loading_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/player_loading_network_margin_top"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/ok_title"
+        android:textSize="@dimen/player_loading_network_speed_size"/>
+
+    <TextView
+        android:id="@+id/play_pre_loading_network_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_pre_loading_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/player_loading_network_speed_margin_top"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/ok_title"
+        android:textSize="@dimen/player_loading_network_speed_size"/>
+
+    <ImageView
+        android:id="@+id/play_pre_loading_network_speed_bar"
+        style="@style/play_network_speed_bar"
+        android:layout_width="@dimen/player_loading_network_speed_bar_width"
+        android:layout_height="@dimen/player_loading_network_speed_bar_width"
+        android:layout_alignTop="@id/play_pre_loading_network_speed"
+        android:layout_marginRight="@dimen/player_loading_network_speed_bar_right"
+        android:layout_marginTop="@dimen/player_loading_network_speed_bar_top"
+        android:layout_toLeftOf="@id/play_pre_loading_network_speed"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/play_pre_loading_restart_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/player_loading_restart_tips_margin_bottom"
+        android:layout_marginRight="@dimen/player_loading_restart_tips_margin_right"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/play_pre_loading_restart_text"
+        android:textColor="@color/ok_title"
+        android:textSize="@dimen/player_loading_restart_tips_text_size"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/play_pre_loading_left_seek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/player_loading_restart_left_seek_bottom"
+        android:layout_marginRight="@dimen/player_loading_restart_left_seek_right"
+        android:scaleType="fitXY"
+        android:src="@drawable/play_pre_seek_left"
+        android:visibility="gone"/>
+
+</RelativeLayout>

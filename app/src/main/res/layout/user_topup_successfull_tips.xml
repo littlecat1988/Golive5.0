@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/popupwin_backgroup"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/topup_pay_dlg_pd_lr"
+        android:paddingRight="@dimen/topup_pay_dlg_pd_lr">
+
+        <TextView
+            android:id="@+id/tv_user_pay_dlg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/topup_pay_dlg_text_title_ts" />
+
+        <TextView
+            android:id="@+id/tv_user_pay_dlg_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/topup_pay_dlg_text_betweed"
+            android:text="@string/topup_dl_sucess_and_credit_prompt"
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/topup_pay_dlg_text_detail_ts" />
+
+        <Button
+            android:id="@+id/user_dialog_pay_bt_yes"
+            android:layout_width="@dimen/topup_pay_dlg_btn_w"
+            android:layout_height="@dimen/center_button_hight"
+            android:layout_marginTop="@dimen/topup_pay_dlg_btn_mg_t"
+            android:background="@drawable/sel_user_button_bg"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/color_ee"
+            android:textSize="@dimen/center_button_textsize" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             android:background="@color/popupwin_backgroup"
+             android:gravity="center"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/user_finance_vg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="top|center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/user_finance_vg_padding_w"
+        android:paddingRight="@dimen/user_finance_vg_padding_w">
+
+        <LinearLayout
+            android:id="@+id/tv_user_finance_dlg_detail_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/user_finance_diglog_igv"
+                android:layout_width="@dimen/dialog_prompt_icon_size"
+                android:layout_height="@dimen/dialog_prompt_icon_size"
+                android:gravity="left"
+                android:src="@drawable/popup_ico_prompt"/>
+
+
+            <LinearLayout
+                android:id="@+id/user_finance_detail_vg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/user_finance_detail_vg_margin"
+                android:gravity="center_vertical|left"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_user_finance_dlg_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/vip_buy_sent_finance"
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_finance_detail_title_tv_font_size"/>
+
+                <TextView
+                    android:id="@+id/tv_user_finance_dlg_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/user_finance_detail_tv_margin_top"
+                    android:gravity="center_vertical|left"
+                    android:text=""
+                    android:textColor="@color/color_ee"
+                    android:textSize="@dimen/user_finance_detail_content_tv_font_size"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/user_finance_detail_btn_vg_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/user_finance_dialog_bt_yes"
+                android:layout_width="@dimen/user_finance_detail_btn_width"
+                android:layout_height="@dimen/center_button_hight"
+                android:background="@drawable/sel_user_button_bg"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:textColor="@color/color_ee"
+                android:textSize="@dimen/center_button_textsize"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

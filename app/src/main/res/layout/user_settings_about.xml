@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/user_setting_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/setting_about_name_mg_l"
+        android:layout_marginTop="@dimen/setting_about_name_mg_t"
+        android:text="@string/setting_about"
+        android:textColor="@color/color_ee"
+        android:textSize="@dimen/setting_about_name_ts"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abount_fragment_vg_icon_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/setting_about_logo_mg_t"
+        android:background="@color/color_1a">
+
+        <ImageView
+            android:layout_width="@dimen/abount_fragment_vg_icon_width"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/user_about_logo"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/abount_fragment_vg_content_margin_top"
+        android:layout_marginTop="@dimen/setting_about_logo_mg_t"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_setting_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abount_fragment_tv_version_margin_top"
+            android:text=""
+            android:textColor="@color/color_cc"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_setting_about_kdm_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abount_fragment_tv_version_margin_top"
+            android:text=""
+            android:textColor="@color/color_cc"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_setting_about_device_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abount_fragment_tv_version_margin_top"
+            android:text=""
+            android:textColor="@color/color_cc"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_setting_about_mac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abount_fragment_tv_version_margin_top"
+            android:text=""
+            android:textColor="@color/color_cc"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_setting_about_netip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/abount_fragment_tv_version_margin_top"
+            android:text=""
+            android:textColor="@color/color_cc"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/setting_about_logo_mg_t"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_setting_about_belong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/abount_fragment_tv_version_margin_top"
+            android:text="2020 Golive. All Right Reserverd"
+            android:textColor="@color/vip_text_hui"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"/>
+
+        <TextView
+            android:id="@+id/tv_setting_about_http"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="http://www.golive-tv.com"
+            android:textColor="@color/vip_text_hui"
+            android:textSize="@dimen/abount_fragment_tv_version_font_size"/>
+    </LinearLayout>
+</LinearLayout>

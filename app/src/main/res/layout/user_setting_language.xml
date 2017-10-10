@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#CF000000"
+              android:gravity="center_horizontal">
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/setting_version_content_w"
+        android:layout_height="@dimen/setting_version_content_h"
+        android:layout_marginTop="@dimen/setting_language_dl_margin_t"
+        android:background="@drawable/user_setting_dialog_shape_bg">
+
+        <TextView
+            android:id="@+id/user_language_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/setting_language_title_tv_mg_l"
+            android:layout_marginTop="@dimen/setting_language_title_tv_mg_t"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingMultiplier="1.42"
+            android:text=""
+            android:textSize="@dimen/setting_language_title_ts"
+            android:textColor="@color/color_ee"/>
+
+        <LinearLayout
+            android:layout_width="@dimen/user_setting_language_btn_w"
+            android:layout_height="match_parent"
+            android:layout_below="@id/user_language_title_tv"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/setting_language_btn_mg_t"
+        >
+            <ListView
+                android:id="@+id/user_lv_setting_language"
+                android:layout_width="@dimen/user_setting_language_btn_w"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:listSelector="@android:color/transparent"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/setting_language_driver"
+                android:fadeScrollbars="false"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbarFadeDuration="0"
+                android:scrollbarThumbVertical="@drawable/channel_roll"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

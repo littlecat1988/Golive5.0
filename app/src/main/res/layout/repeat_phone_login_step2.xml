@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/phonenumber_login_finish_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_phone_step2_text1_top"
+        android:gravity="center"
+        android:text="@string/phone_number_string_detail24"
+        android:textColor="@color/phonenumber_color_d0d0d0"
+        android:textSize="@dimen/repeat_phone_step2_text1_size"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/repeat_phone_step2_layout_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phonenumber_login_finish_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/repeat_phone_step2_layout_top">
+
+        <Button
+            android:id="@+id/repeat_phone_commit_btn"
+            style="@style/init_commit_btn_style"
+            android:layout_width="@dimen/repeat_phone_step2_btn_w"
+            android:layout_height="@dimen/repeat_phone_step2_btn_h"
+            android:layout_alignParentLeft="true"
+            android:text="@string/jump_btn_text">
+
+            <requestFocus/>
+        </Button>
+
+        <Button
+            android:id="@+id/repeat_phone_cancel_btn"
+            style="@style/init_commit_btn_style"
+            android:layout_width="@dimen/repeat_phone_step2_btn_w"
+            android:layout_height="@dimen/repeat_phone_step2_btn_h"
+            android:layout_alignParentRight="true"
+            android:text="@string/cancel_btn_text"/>
+
+    </RelativeLayout>
+</RelativeLayout>
